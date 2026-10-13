@@ -19,8 +19,8 @@
 | ID | Entidad Federativa | Portal Oficial | Legislaturas | Estado | Responsable / PR |
 |---|---|---|---|---|---|
 | 01 | **Aguascalientes** | https://congresoags.gob.mx | — | 🙋 Disponible | — |
-| 02 | **Baja California** | https://www.congresobc.gob.mx | XXV (2024-2027, 25 dips) | ✅ Completado | Issue #12 |
-| 03 | **Baja California Sur** | https://www.cbcs.gob.mx | Constituyente a XVII (18 legislaturas, 278 dips) | ✅ Completado | Issue #15 |
+| 02 | **Baja California** | https://www.congresobc.gob.mx | XVI a XXV (10 legs, 250 dips) | ✅ Completado | Issue #12 |
+| 03 | **Baja California Sur** | https://www.cbcs.gob.mx | — | 🙋 Disponible | — |
 | 04 | **Campeche** | https://congresocampeche.gob.mx | — | 🙋 Disponible | — |
 | 05 | **Coahuila** | https://congresocoahuila.gob.mx | — | 🙋 Disponible | — |
 | 06 | **Colima** | https://congresocolima.gob.mx | — | 🙋 Disponible | — |
@@ -48,7 +48,7 @@
 | 28 | **Tamaulipas** | https://www.congresotamaulipas.gob.mx | LVII a LXVI (10 legs, 306 dips) | ✅ Completado | PR #8 |
 | 29 | **Tlaxcala** | https://congresotlaxcala.gob.mx | — | 🙋 Disponible | — |
 | 30 | **Veracruz** | https://www.legisver.gob.mx | — | 🙋 Disponible | — |
-| 31 | **Yucatán** | https://www.congresoyucatan.gob.mx | LXII a LXIV (3 legs, 85 dips) | ✅ Completado | PR #24 |
+| 31 | **Yucatán** | https://www.congresoyucatan.gob.mx | — | 🙋 Disponible | — |
 | 32 | **Zacatecas** | https://www.congresozac.gob.mx | — | 🙋 Disponible | — |
 
 ---
