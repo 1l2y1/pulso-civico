@@ -46,11 +46,15 @@ class ScraperRouter
             case 'bajacalifornia':
                 return self::scrapeBajaCalifornia($config, $params);
 
+            case 'oaxaca':
+            case 'oax':
+                return self::scrapeOaxaca($config, $params);
+
             default:
                 return [
                     'ok' => false,
                     'error' => "Fuente de scraping '{$source}' no soportada.",
-                    'available_sources' => ['sil', 'votaciones', 'asistencias', 'bc'],
+                    'available_sources' => ['sil', 'votaciones', 'asistencias', 'bc', 'oaxaca'],
                 ];
         }
     }
@@ -174,6 +178,20 @@ class ScraperRouter
         $service = new \PulsoCivico\Services\CongresoBajaCaliforniaScraperService($httpClient, $logger, $config['paths']['storage']);
 
         return $service->scrapeLegislatura25();
+    }
+
+    private static function scrapeOaxaca(array $config, array $params): array
+    {
+        $logger = new Logger($config['paths']['logs'], 'ROUTER-OAXACA');
+        $httpClient = new HttpClient($config['sil'], $logger);
+        $service = new \PulsoCivico\Services\CongresoOaxacaScraperService($httpClient, $logger, $config['paths']['storage']);
+
+        $leg = isset($params['leg']) ? (int)$params['leg'] : (isset($params['legislatura']) ? (int)$params['legislatura'] : null);
+        if ($leg !== null) {
+            return $service->scrapeLegislatura($leg);
+        }
+
+        return $service->scrapeAll();
     }
 }
 

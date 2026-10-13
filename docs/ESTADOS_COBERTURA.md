@@ -37,7 +37,7 @@
 | 17 | **Morelos** | https://congresomorelos.gob.mx | — | 🙋 Disponible | — |
 | 18 | **Nayarit** | https://congresonayarit.gob.mx | — | 🙋 Disponible | — |
 | 19 | **Nuevo León** | https://www.hcnl.gob.mx | — | 🙋 Disponible | — |
-| 20 | **Oaxaca** | https://www.congresooaxaca.gob.mx | — | 🙋 Disponible | — |
+| 20 | **Oaxaca** | https://www.congresooaxaca.gob.mx | LVII a LXVI (10 legs, 418 dips) | ✅ Completado | PR #44 |
 | 21 | **Puebla** | https://www.congresopuebla.gob.mx | — | 🙋 Disponible | — |
 | 22 | **Querétaro** | https://legislaturaqueretaro.gob.mx | — | 🙋 Disponible | — |
 | 23 | **Quintana Roo** | https://congresoqroo.gob.mx | — | 🙋 Disponible | — |
