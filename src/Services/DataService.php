@@ -300,43 +300,47 @@ class DataService
                 ];
             }
 
-            // Votaciones destacadas de la LXVI Legislatura vinculadas por bancada
+            // Votaciones destacadas vinculadas por bancada (únicamente para mandatos de la legislatura del dataset, ej. LXVI)
+            $itemLeg = (int)($item['legislatura'] ?? 66);
             $partidoUpper = strtoupper((string)($item['partido'] ?? ''));
             $votsDestacadas = [];
-            foreach ($this->votaciones as $vot) {
-                $bancadaInfo = null;
-                foreach ($vot['bancadas'] ?? [] as $bNom => $bData) {
-                    if (str_contains($partidoUpper, strtoupper((string)$bNom)) || str_contains(strtoupper((string)$bNom), $partidoUpper)) {
-                        $bancadaInfo = $bData;
-                        break;
+
+            if ($itemLeg === 66 && !empty($this->votaciones)) {
+                foreach ($this->votaciones as $vot) {
+                    $bancadaInfo = null;
+                    foreach ($vot['bancadas'] ?? [] as $bNom => $bData) {
+                        if (str_contains($partidoUpper, strtoupper((string)$bNom)) || str_contains(strtoupper((string)$bNom), $partidoUpper)) {
+                            $bancadaInfo = $bData;
+                            break;
+                        }
                     }
-                }
-                $sentidoBancada = 'A_FAVOR';
-                if ($bancadaInfo) {
-                    if (($bancadaInfo['en_contra'] ?? 0) > ($bancadaInfo['a_favor'] ?? 0)) {
-                        $sentidoBancada = 'EN_CONTRA';
-                    } elseif (($bancadaInfo['abstencion'] ?? 0) > ($bancadaInfo['a_favor'] ?? 0)) {
-                        $sentidoBancada = 'ABSTENCION';
+                    $sentidoBancada = 'A_FAVOR';
+                    if ($bancadaInfo) {
+                        if (($bancadaInfo['en_contra'] ?? 0) > ($bancadaInfo['a_favor'] ?? 0)) {
+                            $sentidoBancada = 'EN_CONTRA';
+                        } elseif (($bancadaInfo['abstencion'] ?? 0) > ($bancadaInfo['a_favor'] ?? 0)) {
+                            $sentidoBancada = 'ABSTENCION';
+                        }
                     }
+                    $origenInfo = $this->obtenerOrigenVotacion($vot['tema_clave'] ?? '', $vot['titulo'] ?? '');
+                    $votsDestacadas[] = [
+                        'id_votacion' => $vot['id_votacion_origen'] ?? 0,
+                        'fecha' => $vot['fecha'] ?? '',
+                        'titulo' => $vot['titulo'] ?? '',
+                        'tema_clave' => $vot['tema_clave'] ?? 'General',
+                        'promovente' => $origenInfo['promovente'],
+                        'origen_tipo' => $origenInfo['tipo'],
+                        'partido_promovente' => $origenInfo['partido'],
+                        'resumen_ciudadano' => $origenInfo['resumen_ciudadano'] ?? '',
+                        'puntos_clave' => $origenInfo['puntos_clave'] ?? [],
+                        'sentido_emitido' => $sentidoBancada,
+                        'resultado_general' => $vot['resultado'] ?? 'Aprobado',
+                        'totales' => $vot['totales'] ?? [],
+                    ];
                 }
-                $origenInfo = $this->obtenerOrigenVotacion($vot['tema_clave'] ?? '', $vot['titulo'] ?? '');
-                $votsDestacadas[] = [
-                    'id_votacion' => $vot['id_votacion_origen'] ?? 0,
-                    'fecha' => $vot['fecha'] ?? '',
-                    'titulo' => $vot['titulo'] ?? '',
-                    'tema_clave' => $vot['tema_clave'] ?? 'General',
-                    'promovente' => $origenInfo['promovente'],
-                    'origen_tipo' => $origenInfo['tipo'],
-                    'partido_promovente' => $origenInfo['partido'],
-                    'resumen_ciudadano' => $origenInfo['resumen_ciudadano'] ?? '',
-                    'puntos_clave' => $origenInfo['puntos_clave'] ?? [],
-                    'sentido_emitido' => $sentidoBancada,
-                    'resultado_general' => $vot['resultado'] ?? 'Aprobado',
-                    'totales' => $vot['totales'] ?? [],
-                ];
             }
             $item['votaciones_destacadas'] = $votsDestacadas;
-            $item['disciplina_partidaria_pct'] = 98.4;
+            $item['disciplina_partidaria_pct'] = !empty($votsDestacadas) ? 98.4 : null;
 
             // Indexar político canónico y agrupar mandatos históricos
             $itemLeg = (int)($item['legislatura'] ?? 66);
