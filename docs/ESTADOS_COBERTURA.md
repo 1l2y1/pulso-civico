@@ -39,7 +39,7 @@
 | 19 | **Nuevo León** | https://www.hcnl.gob.mx | — | 🙋 Disponible | — |
 | 20 | **Oaxaca** | https://www.congresooaxaca.gob.mx | — | 🙋 Disponible | — |
 | 21 | **Puebla** | https://www.congresopuebla.gob.mx | — | 🙋 Disponible | — |
-| 22 | **Querétaro** | https://legislaturaqueretaro.gob.mx | — | 🙋 Disponible | — |
+| 22 | **Querétaro** | https://legislaturaqueretaro.gob.mx | LII a LXI (1997-2027, 250 dips) | ✅ Completado | PR #31 |
 | 23 | **Quintana Roo** | https://congresoqroo.gob.mx | — | 🙋 Disponible | — |
 | 24 | **San Luis Potosí** | https://congresosanluis.gob.mx | — | 🙋 Disponible | — |
 | 25 | **Sinaloa** | https://www.congresosinaloa.gob.mx | — | 🙋 Disponible | — |

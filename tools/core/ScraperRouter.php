@@ -46,11 +46,15 @@ class ScraperRouter
             case 'bajacalifornia':
                 return self::scrapeBajaCalifornia($config, $params);
 
+            case 'queretaro':
+            case 'qro':
+                return self::scrapeQueretaro($config, $params);
+
             default:
                 return [
                     'ok' => false,
                     'error' => "Fuente de scraping '{$source}' no soportada.",
-                    'available_sources' => ['sil', 'votaciones', 'asistencias', 'bc'],
+                    'available_sources' => ['sil', 'votaciones', 'asistencias', 'bc', 'queretaro'],
                 ];
         }
     }
@@ -174,6 +178,27 @@ class ScraperRouter
         $service = new \PulsoCivico\Services\CongresoBajaCaliforniaScraperService($httpClient, $logger, $config['paths']['storage']);
 
         return $service->scrapeLegislatura25();
+    }
+
+    private static function scrapeQueretaro(array $config, array $params): array
+    {
+        $logger = new Logger($config['paths']['logs'], 'ROUTER-QRO');
+        $httpClient = new HttpClient($config['sil'], $logger);
+        $service = new \PulsoCivico\Services\CongresoQueretaroScraperService($httpClient, $logger, $config['paths']['storage']);
+
+        if (isset($params['legislatura']) && is_numeric($params['legislatura'])) {
+            $leg = (int)$params['legislatura'];
+            $res = $service->scrapeLegislatura($leg);
+            return [
+                'ok' => true,
+                'source' => 'congreso_queretaro',
+                'legislatura' => $leg,
+                'total_legisladores' => count($res['legisladores'] ?? []),
+                'archivo' => $res['archivo'] ?? null,
+            ];
+        }
+
+        return $service->scrapeAll();
     }
 }
 
