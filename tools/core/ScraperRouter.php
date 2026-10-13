@@ -42,11 +42,15 @@ class ScraperRouter
             case 'asistencias':
                 return self::scrapeAsistencias($config, $params);
 
+            case 'sinaloa':
+            case 'congreso_sinaloa':
+                return self::scrapeSinaloa($config, $params);
+
             default:
                 return [
                     'ok' => false,
                     'error' => "Fuente de scraping '{$source}' no soportada.",
-                    'available_sources' => ['sil', 'votaciones', 'asistencias'],
+                    'available_sources' => ['sil', 'votaciones', 'asistencias', 'sinaloa'],
                 ];
         }
     }
@@ -162,4 +166,20 @@ class ScraperRouter
 
         return $service->scrapeNominalAsistenciasPeriodo($pert);
     }
+
+    private static function scrapeSinaloa(array $config, array $params): array
+    {
+        $logger = new Logger($config['paths']['logs'], 'ROUTER-SINALOA');
+        $httpClient = new HttpClient($config['sil'], $logger);
+        $service = new \PulsoCivico\Services\SinaloaScraperService($config, $httpClient, $logger);
+
+        $historico = !empty($params['historico']) || (isset($params['legislatura']) && $params['legislatura'] === 'all');
+        if ($historico) {
+            return $service->extraerTodas();
+        }
+
+        $legislatura = isset($params['legislatura']) ? (int)$params['legislatura'] : 65;
+        return $service->extraer($legislatura);
+    }
 }
+
