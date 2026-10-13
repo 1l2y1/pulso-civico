@@ -48,7 +48,7 @@
 | 28 | **Tamaulipas** | https://www.congresotamaulipas.gob.mx | LVII a LXVI (10 legs, 306 dips) | ✅ Completado | PR #8 |
 | 29 | **Tlaxcala** | https://congresotlaxcala.gob.mx | — | 🙋 Disponible | — |
 | 30 | **Veracruz** | https://www.legisver.gob.mx | — | 🙋 Disponible | — |
-| 31 | **Yucatán** | https://www.congresoyucatan.gob.mx | — | 🙋 Disponible | — |
+| 31 | **Yucatán** | https://www.congresoyucatan.gob.mx | LXII a LXIV (3 legs, 85 dips) | ✅ Completado | PR #24 |
 | 32 | **Zacatecas** | https://www.congresozac.gob.mx | — | 🙋 Disponible | — |
 
 ---

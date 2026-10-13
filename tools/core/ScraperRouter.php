@@ -50,11 +50,15 @@ class ScraperRouter
             case 'bajacaliforniasur':
                 return self::scrapeBajaCaliforniaSur($config, $params);
 
+            case 'yuc':
+            case 'yucatan':
+                return self::scrapeYucatan($config, $params);
+
             default:
                 return [
                     'ok' => false,
                     'error' => "Fuente de scraping '{$source}' no soportada.",
-                    'available_sources' => ['sil', 'votaciones', 'asistencias', 'bc', 'bcs'],
+                    'available_sources' => ['sil', 'votaciones', 'asistencias', 'bc', 'bcs', 'yucatan'],
                 ];
         }
     }
@@ -189,6 +193,24 @@ class ScraperRouter
         $modo = strtolower((string)($params['modo'] ?? 'todo'));
         if ($modo === 'actual' || $modo === '17' || (!empty($params['legislatura']) && (int)$params['legislatura'] === 17)) {
             return $service->scrapeLegislatura17();
+        }
+
+        if ($modo === 'historico' || $modo === 'historicas') {
+            return $service->scrapeTodasHistoricas();
+        }
+
+        return $service->scrapeTodo();
+    }
+
+    private static function scrapeYucatan(array $config, array $params): array
+    {
+        $logger = new Logger($config['paths']['logs'], 'ROUTER-YUC');
+        $httpClient = new HttpClient($config['sil'], $logger);
+        $service = new \PulsoCivico\Services\CongresoYucatanScraperService($httpClient, $logger, $config['paths']['storage']);
+
+        $modo = strtolower((string)($params['modo'] ?? 'todo'));
+        if ($modo === 'actual' || $modo === '64' || (!empty($params['legislatura']) && (int)$params['legislatura'] === 64)) {
+            return $service->scrapeLegislatura64();
         }
 
         if ($modo === 'historico' || $modo === 'historicas') {
