@@ -46,7 +46,7 @@
 | 26 | **Sonora** | https://www.congresoson.gob.mx | — | 🙋 Disponible | — |
 | 27 | **Tabasco** | https://congresotabasco.gob.mx | — | 🙋 Disponible | — |
 | 28 | **Tamaulipas** | https://www.congresotamaulipas.gob.mx | LVII a LXVI (10 legs, 306 dips) | ✅ Completado | PR #8 |
-| 29 | **Tlaxcala** | https://congresotlaxcala.gob.mx | — | 🙋 Disponible | — |
+| 29 | **Tlaxcala** | https://congresodetlaxcala.gob.mx | LVI a LXV (10 legs, 292 dips) | ✅ Completado | PR #42 |
 | 30 | **Veracruz** | https://www.legisver.gob.mx | — | 🙋 Disponible | — |
 | 31 | **Yucatán** | https://www.congresoyucatan.gob.mx | — | 🙋 Disponible | — |
 | 32 | **Zacatecas** | https://www.congresozac.gob.mx | — | 🙋 Disponible | — |
