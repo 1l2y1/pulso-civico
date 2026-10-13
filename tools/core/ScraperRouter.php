@@ -50,6 +50,11 @@ class ScraperRouter
             case 'bajacaliforniasur':
                 return self::scrapeBajaCaliforniaSur($config, $params);
 
+            case 'cam':
+            case 'campeche':
+            case 'congreso_campeche':
+                return self::scrapeCampeche($config, $params);
+
             case 'yuc':
             case 'yucatan':
                 return self::scrapeYucatan($config, $params);
@@ -83,11 +88,16 @@ class ScraperRouter
             case 'congreso_nuevoleon':
                 return self::scrapeNuevoLeon($config, $params);
 
+            case 'tab':
+            case 'tabasco':
+            case 'congreso_tabasco':
+                return self::scrapeTabasco($config, $params);
+
             default:
                 return [
                     'ok' => false,
                     'error' => "Fuente de scraping '{$source}' no soportada.",
-                    'available_sources' => ['sil', 'votaciones', 'asistencias', 'bc', 'bcs', 'yucatan', 'quintanaroo', 'sinaloa', 'sonora', 'durango', 'chihuahua', 'coahuila', 'nuevoleon'],
+                    'available_sources' => ['sil', 'votaciones', 'asistencias', 'bc', 'bcs', 'yucatan', 'quintanaroo', 'sinaloa', 'sonora', 'durango', 'chihuahua', 'coahuila', 'nuevoleon', 'tabasco'],
                 ];
         }
     }
@@ -231,6 +241,15 @@ class ScraperRouter
         return $service->scrapeTodo();
     }
 
+    private static function scrapeCampeche(array $config, array $params): array
+    {
+        $logger = new Logger($config['paths']['logs'], 'ROUTER-CAM');
+        $httpClient = new HttpClient($config['sil'], $logger);
+        $service = new \PulsoCivico\Services\CongresoCampecheScraperService($httpClient, $logger, $config['paths']['storage']);
+
+        return $service->scrapeLegislatura65();
+    }
+
     private static function scrapeYucatan(array $config, array $params): array
     {
         $logger = new Logger($config['paths']['logs'], 'ROUTER-YUC');
@@ -359,6 +378,37 @@ class ScraperRouter
         }
         $res['duracion_segundos'] = round(microtime(true) - $inicio, 2);
         return $res;
+    }
+
+    private static function scrapeTabasco(array $config, array $params): array
+    {
+        $logger = new Logger($config['paths']['logs'], 'SCRAPER-TABASCO');
+        $httpClient = new HttpClient($config['sil'], $logger);
+        $service = new \PulsoCivico\Services\CongresoTabascoScraperService($httpClient, $logger, $config['paths']['storage']);
+
+        $modo = strtolower((string)($params['modo'] ?? 'todo'));
+        $leg = isset($params['legislatura']) ? (int)$params['legislatura'] : 0;
+
+        if ($leg === 65 || $modo === 'actual') {
+            return $service->scrapeLegislatura65();
+        }
+
+        if ($leg === 64 || $leg === 63) {
+            return $service->scrapeLegislaturaHistorica($leg);
+        }
+
+        if ($modo === 'historico' || $modo === 'historicas') {
+            $r64 = $service->scrapeLegislaturaHistorica(64);
+            $r63 = $service->scrapeLegislaturaHistorica(63);
+            return [
+                'ok' => true,
+                'entidad' => 'Tabasco',
+                'modo' => 'historico',
+                'detalle' => ['64' => $r64, '63' => $r63],
+            ];
+        }
+
+        return $service->scrapeTodo();
     }
 }
 

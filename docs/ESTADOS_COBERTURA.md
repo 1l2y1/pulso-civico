@@ -21,7 +21,7 @@
 | 01 | **Aguascalientes** | https://congresoags.gob.mx | — | 🙋 Disponible | — |
 | 02 | **Baja California** | https://www.congresobc.gob.mx | XVI a XXV (10 legs, 250 dips) | ✅ Completado | Issue #12 |
 | 03 | **Baja California Sur** | https://www.cbcs.gob.mx | — | 🙋 Disponible | — |
-| 04 | **Campeche** | https://congresocampeche.gob.mx | — | 🙋 Disponible | — |
+| 04 | **Campeche** | https://congresocam.gob.mx | LXV (2024–2027, 35 dips) | ✅ Completado | Issue #16 |
 | 05 | **Coahuila** | https://congresocoahuila.gob.mx | — | 🙋 Disponible | — |
 | 06 | **Colima** | https://congresocolima.gob.mx | — | 🙋 Disponible | — |
 | 07 | **Chiapas** | https://www.congresochiapas.gob.mx | — | 🙋 Disponible | — |

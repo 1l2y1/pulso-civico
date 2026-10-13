@@ -85,6 +85,26 @@ switch ($action) {
         $response = array_merge($response, $result);
         break;
 
+    case 'git:sync_push':
+        $fetchRes = GitOps::execGit('fetch origin main');
+        $pullRes = GitOps::execGit('pull --rebase --autostash origin main');
+        GitOps::execGit('branch -f main HEAD');
+        $pushRes = GitOps::execGit('push origin HEAD:main');
+        $response['fetch'] = $fetchRes;
+        $response['pull_rebase'] = $pullRes;
+        $response['push'] = $pushRes;
+        $response['ok'] = ($pushRes['code'] === 0);
+        break;
+
+    case 'git:push_branch':
+        $branch = $target !== '' ? $target : 'data/integracion-congresos-norte';
+        GitOps::execGit("checkout -B {$branch}");
+        $pushRes = GitOps::execGit("push -u origin {$branch} --force");
+        $response['push'] = $pushRes;
+        $response['ok'] = ($pushRes['code'] === 0);
+        $response['branch'] = $branch;
+        break;
+
     case 'git:preflight':
         $result = GitOps::preflightCheck($rootDir);
         $response = array_merge($response, $result);
@@ -428,7 +448,7 @@ switch ($action) {
                         $params[$k] = is_numeric($v) ? (int)$v : $v;
                     }
                 }
-            } elseif (in_array(strtolower($inp), ['sil', 'votaciones', 'asistencias', 'bc', 'bajacalifornia', 'bcs', 'bajacaliforniasur', 'yuc', 'yucatan', 'qroo', 'quintanaroo'])) {
+            } elseif (in_array(strtolower($inp), ['sil', 'votaciones', 'asistencias', 'bc', 'bajacalifornia', 'bcs', 'bajacaliforniasur', 'cam', 'campeche', 'yuc', 'yucatan', 'qroo', 'quintanaroo', 'sinaloa', 'sonora', 'durango', 'chihuahua', 'coahuila', 'nuevoleon'])) {
                 $source = strtolower($inp);
             }
         }
