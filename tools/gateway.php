@@ -114,10 +114,11 @@ switch ($action) {
     case 'telegram:updates':
     case 'telegram:send':
     case 'telegram:post':
-        $privateBot = $rootDir . '/tools/private/telegram_bot.php';
-        if (file_exists($privateBot)) {
+    case 'telegram:poll':
+        $script = ($action === 'telegram:poll') ? $rootDir . '/tools/private/telegram_poll.php' : $rootDir . '/tools/private/telegram_bot.php';
+        if (file_exists($script)) {
             $phpExec = defined('PHP_BINARY') && PHP_BINARY !== '' ? PHP_BINARY : 'php';
-            $cmd = escapeshellarg($phpExec) . " " . escapeshellarg($privateBot) . " " . escapeshellarg(str_replace('telegram:', '', $action)) . " " . escapeshellarg($target) . " " . escapeshellarg($extra);
+            $cmd = escapeshellarg($phpExec) . " " . escapeshellarg($script) . " " . escapeshellarg(str_replace('telegram:', '', $action)) . " " . escapeshellarg($target) . " " . escapeshellarg($extra);
             $output = [];
             exec($cmd, $output);
             $response['bot_output'] = json_decode(implode("\n", $output), true) ?: implode("\n", $output);
@@ -140,7 +141,14 @@ switch ($action) {
                 'project:answer' => 'answer',
             ];
             $mode = $modeMap[$action] ?? 'report';
-            $cmd = escapeshellarg($phpExec) . " " . escapeshellarg($assistant) . " " . escapeshellarg($mode) . " " . escapeshellarg($target) . " " . escapeshellarg($extra);
+            $arg1 = ($action === 'project:answer') ? $target : $target;
+            $arg2 = ($action === 'project:answer') ? $extra : $extra;
+            if ($action === 'project:answer' && is_numeric(trim($target, "'\""))) {
+                // Si el primer arg es numérico (chat_id), invertirlos para compatibilidad
+                $arg1 = $extra;
+                $arg2 = $target;
+            }
+            $cmd = escapeshellarg($phpExec) . " " . escapeshellarg($assistant) . " " . escapeshellarg($mode) . " " . escapeshellarg($arg1) . " " . escapeshellarg($arg2);
             $output = [];
             exec($cmd, $output);
             $rawOut = implode("\n", $output);
@@ -246,7 +254,7 @@ switch ($action) {
                         $params[$k] = is_numeric($v) ? (int)$v : $v;
                     }
                 }
-            } elseif (in_array(strtolower($inp), ['sil', 'votaciones', 'asistencias', 'bc', 'bajacalifornia'])) {
+            } elseif (in_array(strtolower($inp), ['sil', 'votaciones', 'asistencias', 'bc', 'bajacalifornia', 'bcs', 'bajacaliforniasur'])) {
                 $source = strtolower($inp);
             }
         }

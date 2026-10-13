@@ -20,7 +20,7 @@
 |---|---|---|---|---|---|
 | 01 | **Aguascalientes** | https://congresoags.gob.mx | — | 🙋 Disponible | — |
 | 02 | **Baja California** | https://www.congresobc.gob.mx | XXV (2024-2027, 25 dips) | ✅ Completado | Issue #12 |
-| 03 | **Baja California Sur** | https://www.cbcs.gob.mx | — | 🙋 Disponible | — |
+| 03 | **Baja California Sur** | https://www.cbcs.gob.mx | Constituyente a XVII (18 legislaturas, 278 dips) | ✅ Completado | Issue #15 |
 | 04 | **Campeche** | https://congresocampeche.gob.mx | — | 🙋 Disponible | — |
 | 05 | **Coahuila** | https://congresocoahuila.gob.mx | — | 🙋 Disponible | — |
 | 06 | **Colima** | https://congresocolima.gob.mx | — | 🙋 Disponible | — |
