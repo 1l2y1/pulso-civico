@@ -33,7 +33,7 @@
 | 13 | **Hidalgo** | https://www.congresohidalgo.gob.mx | — | 🙋 Disponible | — |
 | 14 | **Jalisco** | https://www.congresojal.gob.mx | — | 🙋 Disponible | — |
 | 15 | **Estado de México** | https://legislativoedomex.gob.mx | — | 🙋 Disponible | — |
-| 16 | **Michoacán** | https://congresomich.gob.mx | — | 🙋 Disponible | — |
+| 16 | **Michoacán** | https://congresomich.gob.mx | LXVII a LXXVI (1995-2027, 380 dips) | ✅ Completado | PR #33 |
 | 17 | **Morelos** | https://congresomorelos.gob.mx | — | 🙋 Disponible | — |
 | 18 | **Nayarit** | https://congresonayarit.gob.mx | — | 🙋 Disponible | — |
 | 19 | **Nuevo León** | https://www.hcnl.gob.mx | — | 🙋 Disponible | — |
