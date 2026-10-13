@@ -304,22 +304,90 @@ switch ($action) {
             'PR #16 (Congreso Nuevo León LXXI-LXXVII)'  => 'origin/data/congreso-nuevoleon',
         ];
         $integrated = [];
+        $allExtractedFiles = [];
         foreach ($prs as $prLabel => $branch) {
-            // Obtener lista de archivos en la rama
-            $outFiles = [];
-            exec("git ls-tree -r --name-only {$branch} storage/data/json/", $outFiles);
-            $count = 0;
-            if (!empty($outFiles)) {
-                exec("git checkout {$branch} -- storage/data/json/");
-                $count = count($outFiles);
+            $files = [];
+            exec("git --no-pager diff --name-only origin/main...{$branch} 2>&1", $files);
+            $restored = [];
+            foreach ($files as $f) {
+                $f = trim($f);
+                if ($f === '' || $f === '.gitignore' || $f === 'tools/core/ScraperRouter.php' || $f === 'tools/gateway.php' || $f === 'tools/core/Inspector.php') {
+                    continue;
+                }
+                if (str_starts_with($f, 'storage/data/json/congreso_') || 
+                    str_starts_with($f, 'src/Services/') || 
+                    str_ends_with($f, '.py') || 
+                    $f === 'docs/ESTADOS_COBERTURA.md') {
+                    
+                    $outCo = [];
+                    $code = 0;
+                    exec("git --no-pager checkout {$branch} -- " . escapeshellarg($f) . " 2>&1", $outCo, $code);
+                    if ($code === 0) {
+                        $restored[] = $f;
+                        $allExtractedFiles[] = $f;
+                    }
+                }
             }
             $integrated[$prLabel] = [
                 'branch' => $branch,
-                'files_restored' => $count,
-                'sample' => array_slice($outFiles, 0, 3),
+                'files_restored_count' => count($restored),
+                'files' => $restored,
             ];
         }
         $response['integrated'] = $integrated;
+        $response['total_files_extracted'] = count($allExtractedFiles);
+        $response['all_files'] = array_values(array_unique($allExtractedFiles));
+        break;
+
+    case 'ship:prs':
+        $filesToStage = [
+            'docs/ESTADOS_COBERTURA.md',
+            'tools/core/ScraperRouter.php',
+            'tools/gateway.php',
+            'tools/core/coahuila_parser.py',
+            'tools/core/nl_pdf_parser.py',
+            'src/Services/Catalog/BajaCaliforniaCatalogXXV.php',
+            'src/Services/CongresoBajaCaliforniaScraperService.php',
+            'src/Services/SinaloaScraperService.php',
+            'src/Services/SinaloaTableParser.php',
+            'src/Services/SonoraScraperService.php',
+            'src/Services/SonoraTableParser.php',
+            'src/Services/DurangoScraperService.php',
+            'src/Services/DurangoTableParser.php',
+            'src/Services/ChihuahuaScraperService.php',
+            'src/Services/CoahuilaScraperService.php',
+            'src/Services/NuevoLeonScraperService.php',
+        ];
+
+        // Agregar todos los json de congresos estatales
+        $jsonDir = $rootDir . '/storage/data/json';
+        $stateJsonFiles = glob($jsonDir . '/congreso_*.json') ?: [];
+        foreach ($stateJsonFiles as $sj) {
+            $filesToStage[] = 'storage/data/json/' . basename($sj);
+        }
+
+        $staged = [];
+        foreach (array_unique($filesToStage) as $f) {
+            $fullPath = $rootDir . '/' . $f;
+            if (file_exists($fullPath)) {
+                GitOps::execGit('add ' . escapeshellarg($f));
+                $staged[] = $f;
+            }
+        }
+
+        $commitMsg = $target !== '' ? $target : 'feat(data): incorporar datasets historicos y scrapers de 7 congresos estatales (resolves #16, #17, #18, #19, #20, #21, #22)';
+        $cRes = GitOps::execGit('commit -m ' . escapeshellarg($commitMsg));
+        $response['commit_result'] = $cRes;
+        $response['files_staged_count'] = count($staged);
+        $response['files_staged'] = $staged;
+
+        if ($cRes['code'] === 0) {
+            $pRes = GitOps::execGit('push origin main');
+            $response['push_result'] = $pRes;
+            $response['ok'] = ($pRes['code'] === 0);
+        } else {
+            $response['ok'] = false;
+        }
         break;
 
     case 'health':
