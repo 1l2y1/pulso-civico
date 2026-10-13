@@ -49,7 +49,7 @@
 | 29 | **Tlaxcala** | https://congresotlaxcala.gob.mx | — | 🙋 Disponible | — |
 | 30 | **Veracruz** | https://www.legisver.gob.mx | — | 🙋 Disponible | — |
 | 31 | **Yucatán** | https://www.congresoyucatan.gob.mx | — | 🙋 Disponible | — |
-| 32 | **Zacatecas** | https://www.congresozac.gob.mx | — | 🙋 Disponible | — |
+| 32 | **Zacatecas** | https://www.congresozac.gob.mx | LV a LXV (11 legs, 330 dips) | ✅ Completado | PR #24 |
 
 ---
 
