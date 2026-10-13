@@ -46,11 +46,16 @@ class ScraperRouter
             case 'bajacalifornia':
                 return self::scrapeBajaCalifornia($config, $params);
 
+            case 'edomex':
+            case 'estadodemexico':
+            case 'mex':
+                return self::scrapeEdomex($config, $params);
+
             default:
                 return [
                     'ok' => false,
                     'error' => "Fuente de scraping '{$source}' no soportada.",
-                    'available_sources' => ['sil', 'votaciones', 'asistencias', 'bc'],
+                    'available_sources' => ['sil', 'votaciones', 'asistencias', 'bc', 'edomex'],
                 ];
         }
     }
@@ -174,6 +179,19 @@ class ScraperRouter
         $service = new \PulsoCivico\Services\CongresoBajaCaliforniaScraperService($httpClient, $logger, $config['paths']['storage']);
 
         return $service->scrapeLegislatura25();
+    }
+
+    private static function scrapeEdomex(array $config, array $params): array
+    {
+        $logger = new Logger($config['paths']['logs'], 'ROUTER-EDOMEX');
+        $httpClient = new HttpClient($config['sil'], $logger);
+        $service = new \PulsoCivico\Services\CongresoEdomexScraperService($httpClient, $logger, $config['paths']['storage']);
+
+        if (!empty($params['legislatura'])) {
+            return $service->scrapeLegislatura((int)$params['legislatura']);
+        }
+
+        return $service->scrapeAll();
     }
 }
 

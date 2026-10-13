@@ -32,7 +32,7 @@
 | 12 | **Guerrero** | https://congresogro.gob.mx | — | 🙋 Disponible | — |
 | 13 | **Hidalgo** | https://www.congresohidalgo.gob.mx | — | 🙋 Disponible | — |
 | 14 | **Jalisco** | https://www.congresojal.gob.mx | — | 🙋 Disponible | — |
-| 15 | **Estado de México** | https://legislativoedomex.gob.mx | — | 🙋 Disponible | — |
+| 15 | **Estado de México** | https://legislativoedomex.gob.mx | LI a LXII (12 legs, 873 dips) | ✅ Completado | PR #35 |
 | 16 | **Michoacán** | https://congresomich.gob.mx | — | 🙋 Disponible | — |
 | 17 | **Morelos** | https://congresomorelos.gob.mx | — | 🙋 Disponible | — |
 | 18 | **Nayarit** | https://congresonayarit.gob.mx | — | 🙋 Disponible | — |
