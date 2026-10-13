@@ -11,6 +11,10 @@ storage/raw/cookie.txt
 
 # --- Datos crudos (se regeneran con los scrapers) ---
 storage/raw/html/
+storage/raw/coahuila/
+storage/raw/nuevoleon/
+storage/raw/tamaulipas/
+storage/raw/pdf/
 storage/raw/*.txt
 storage/raw/*.html
 

@@ -42,11 +42,15 @@ class ScraperRouter
             case 'asistencias':
                 return self::scrapeAsistencias($config, $params);
 
+            case 'coahuila':
+            case 'congreso_coahuila':
+                return self::scrapeCoahuila($config, $params);
+
             default:
                 return [
                     'ok' => false,
                     'error' => "Fuente de scraping '{$source}' no soportada.",
-                    'available_sources' => ['sil', 'votaciones', 'asistencias'],
+                    'available_sources' => ['sil', 'votaciones', 'asistencias', 'coahuila'],
                 ];
         }
     }
@@ -161,5 +165,22 @@ class ScraperRouter
         }
 
         return $service->scrapeNominalAsistenciasPeriodo($pert);
+    }
+
+    private static function scrapeCoahuila(array $config, array $params): array
+    {
+        $logger = new Logger($config['paths']['logs'], 'SCRAPER-COAHUILA');
+        $httpClient = new HttpClient($config['sil'], $logger);
+        $service = new \PulsoCivico\Services\CoahuilaScraperService($config, $httpClient, $logger);
+
+        $inicio = microtime(true);
+        if (!empty($params['todas']) || (isset($params['historico']) && (string)$params['historico'] === '1')) {
+            $res = $service->extraerTodas();
+        } else {
+            $legislatura = isset($params['legislatura']) ? (int)$params['legislatura'] : 63;
+            $res = $service->extraer($legislatura);
+        }
+        $res['duracion_segundos'] = round(microtime(true) - $inicio, 2);
+        return $res;
     }
 }
