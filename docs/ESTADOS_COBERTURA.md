@@ -41,7 +41,7 @@
 | 21 | **Puebla** | https://www.congresopuebla.gob.mx | — | 🙋 Disponible | — |
 | 22 | **Querétaro** | https://legislaturaqueretaro.gob.mx | — | 🙋 Disponible | — |
 | 23 | **Quintana Roo** | https://congresoqroo.gob.mx | — | 🙋 Disponible | — |
-| 24 | **San Luis Potosí** | https://congresosanluis.gob.mx | — | 🙋 Disponible | — |
+| 24 | **San Luis Potosí** | https://congresosanluis.gob.mx | LV a LXIV (1997-2027, 270 dips) | ✅ Completado | PR #27 |
 | 25 | **Sinaloa** | https://www.congresosinaloa.gob.mx | — | 🙋 Disponible | — |
 | 26 | **Sonora** | https://www.congresoson.gob.mx | — | 🙋 Disponible | — |
 | 27 | **Tabasco** | https://congresotabasco.gob.mx | — | 🙋 Disponible | — |

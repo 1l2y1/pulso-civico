@@ -46,11 +46,15 @@ class ScraperRouter
             case 'bajacalifornia':
                 return self::scrapeBajaCalifornia($config, $params);
 
+            case 'sanluispotosi':
+            case 'slp':
+                return self::scrapeSanLuisPotosi($config, $params);
+
             default:
                 return [
                     'ok' => false,
                     'error' => "Fuente de scraping '{$source}' no soportada.",
-                    'available_sources' => ['sil', 'votaciones', 'asistencias', 'bc'],
+                    'available_sources' => ['sil', 'votaciones', 'asistencias', 'bc', 'sanluispotosi'],
                 ];
         }
     }
@@ -174,6 +178,27 @@ class ScraperRouter
         $service = new \PulsoCivico\Services\CongresoBajaCaliforniaScraperService($httpClient, $logger, $config['paths']['storage']);
 
         return $service->scrapeLegislatura25();
+    }
+
+    private static function scrapeSanLuisPotosi(array $config, array $params): array
+    {
+        $logger = new Logger($config['paths']['logs'], 'ROUTER-SLP');
+        $httpClient = new HttpClient($config['sil'], $logger);
+        $service = new \PulsoCivico\Services\CongresoSanLuisPotosiScraperService($httpClient, $logger, $config['paths']['storage']);
+
+        if (isset($params['legislatura']) && is_numeric($params['legislatura'])) {
+            $leg = (int)$params['legislatura'];
+            $res = $service->scrapeLegislatura($leg);
+            return [
+                'ok' => true,
+                'source' => 'congreso_sanluispotosi',
+                'legislatura' => $leg,
+                'total_legisladores' => count($res['legisladores'] ?? []),
+                'archivo' => $res['archivo'] ?? null,
+            ];
+        }
+
+        return $service->scrapeAll();
     }
 }
 
