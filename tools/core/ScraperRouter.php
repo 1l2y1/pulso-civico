@@ -42,11 +42,20 @@ class ScraperRouter
             case 'asistencias':
                 return self::scrapeAsistencias($config, $params);
 
+            case 'tamaulipas':
+            case 'congreso_tamaulipas':
+                return self::scrapeTamaulipas($config, $params);
+
+            case 'nuevoleon':
+            case 'nuevo_leon':
+            case 'congreso_nuevoleon':
+                return self::scrapeNuevoLeon($config, $params);
+
             default:
                 return [
                     'ok' => false,
                     'error' => "Fuente de scraping '{$source}' no soportada.",
-                    'available_sources' => ['sil', 'votaciones', 'asistencias'],
+                    'available_sources' => ['sil', 'votaciones', 'asistencias', 'tamaulipas', 'nuevoleon'],
                 ];
         }
     }
@@ -161,5 +170,39 @@ class ScraperRouter
         }
 
         return $service->scrapeNominalAsistenciasPeriodo($pert);
+    }
+
+    private static function scrapeTamaulipas(array $config, array $params): array
+    {
+        $logger = new Logger($config['paths']['logs'], 'SCRAPER-TAMAULIPAS');
+        $httpClient = new HttpClient($config['sil'], $logger);
+        $service = new \PulsoCivico\Services\TamaulipasScraperService($config, $httpClient, $logger);
+
+        $inicio = microtime(true);
+        if (!empty($params['todas']) || (isset($params['historico']) && (string)$params['historico'] === '1')) {
+            $res = $service->extraerTodas();
+        } else {
+            $legislatura = isset($params['legislatura']) ? (int)$params['legislatura'] : 66;
+            $res = $service->extraer($legislatura);
+        }
+        $res['duracion_segundos'] = round(microtime(true) - $inicio, 2);
+        return $res;
+    }
+
+    private static function scrapeNuevoLeon(array $config, array $params): array
+    {
+        $logger = new Logger($config['paths']['logs'], 'SCRAPER-NUEVOLEON');
+        $httpClient = new HttpClient($config['sil'], $logger);
+        $service = new \PulsoCivico\Services\NuevoLeonScraperService($config, $httpClient, $logger);
+
+        $inicio = microtime(true);
+        if (!empty($params['todas']) || (isset($params['historico']) && (string)$params['historico'] === '1')) {
+            $res = $service->extraerTodas();
+        } else {
+            $legislatura = isset($params['legislatura']) ? (int)$params['legislatura'] : 77;
+            $res = $service->extraer($legislatura);
+        }
+        $res['duracion_segundos'] = round(microtime(true) - $inicio, 2);
+        return $res;
     }
 }
