@@ -18,7 +18,7 @@
 
 | ID | Entidad Federativa | Portal Oficial | Legislaturas | Estado | Responsable / PR |
 |---|---|---|---|---|---|
-| 01 | **Aguascalientes** | https://congresoags.gob.mx | — | 🙋 Disponible | — |
+| 01 | **Aguascalientes** | https://congresoags.gob.mx | LV a LXVI (1992-2027, 322 dips) | ✅ Completado | PR #25 |
 | 02 | **Baja California** | https://www.congresobc.gob.mx | XXV (2024-2027, 25 dips) | ✅ Completado | Issue #12 |
 | 03 | **Baja California Sur** | https://www.cbcs.gob.mx | — | 🙋 Disponible | — |
 | 04 | **Campeche** | https://congresocampeche.gob.mx | — | 🙋 Disponible | — |

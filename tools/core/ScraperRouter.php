@@ -46,11 +46,15 @@ class ScraperRouter
             case 'bajacalifornia':
                 return self::scrapeBajaCalifornia($config, $params);
 
+            case 'aguascalientes':
+            case 'ags':
+                return self::scrapeAguascalientes($config, $params);
+
             default:
                 return [
                     'ok' => false,
                     'error' => "Fuente de scraping '{$source}' no soportada.",
-                    'available_sources' => ['sil', 'votaciones', 'asistencias', 'bc'],
+                    'available_sources' => ['sil', 'votaciones', 'asistencias', 'bc', 'aguascalientes'],
                 ];
         }
     }
@@ -175,5 +179,27 @@ class ScraperRouter
 
         return $service->scrapeLegislatura25();
     }
+
+    private static function scrapeAguascalientes(array $config, array $params): array
+    {
+        $logger = new Logger($config['paths']['logs'], 'ROUTER-AGS');
+        $httpClient = new HttpClient($config['sil'], $logger);
+        $service = new \PulsoCivico\Services\CongresoAguascalientesScraperService($httpClient, $logger, $config['paths']['storage']);
+
+        if (isset($params['legislatura']) && is_numeric($params['legislatura'])) {
+            $leg = (int)$params['legislatura'];
+            $res = $service->scrapeLegislatura($leg);
+            return [
+                'ok' => true,
+                'source' => 'congreso_aguascalientes',
+                'legislatura' => $leg,
+                'total_legisladores' => count($res['legisladores'] ?? []),
+                'archivo' => $res['archivo'] ?? null,
+            ];
+        }
+
+        return $service->scrapeAll();
+    }
 }
+
 
