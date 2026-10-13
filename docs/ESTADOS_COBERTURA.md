@@ -29,7 +29,7 @@
 | 09 | **Ciudad de México** | https://www.congresocdmx.gob.mx | — | 🙋 Disponible | — |
 | 10 | **Durango** | https://congresodurango.gob.mx | — | 🙋 Disponible | — |
 | 11 | **Guanajuato** | https://www.congresogto.gob.mx | — | 🙋 Disponible | — |
-| 12 | **Guerrero** | https://congresogro.gob.mx | — | 🙋 Disponible | — |
+| 12 | **Guerrero** | https://congresogro.gob.mx | LVI a LXIV (9 legs, 413 dips) | ✅ Completado | PR #41 |
 | 13 | **Hidalgo** | https://www.congresohidalgo.gob.mx | — | 🙋 Disponible | — |
 | 14 | **Jalisco** | https://www.congresojal.gob.mx | — | 🙋 Disponible | — |
 | 15 | **Estado de México** | https://legislativoedomex.gob.mx | — | 🙋 Disponible | — |
