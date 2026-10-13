@@ -67,6 +67,12 @@ switch ($action) {
         $response = array_merge($response, $result);
         break;
 
+    case 'gh:cmd':
+        $fullCmd = $target . ($extra !== '' ? " {$extra}" : '');
+        $result = GitOps::execGh($fullCmd);
+        $response = array_merge($response, $result);
+        break;
+
     case 'git:commit':
         $msg = $target !== '' ? $target : 'data: incorporar dataset del Congreso de Baja California (resolves #12)';
         $result = GitOps::execGit('commit -m ' . escapeshellarg($msg));
@@ -169,12 +175,13 @@ switch ($action) {
     case 'audit:prs':
     case 'audit:all':
         $prs = [
-            'PR #11 (LXV 2021-2024)' => 'origin/data/leg-65',
-            'PR #10 (LXIV 2018-2021)' => 'origin/data/leg-64',
-            'PR #9 (LXIII 2015-2018)' => 'origin/data/leg-63',
-            'PR #8 (Congreso Tamaulipas)' => 'origin/data/congreso-tamaulipas',
-            'PR #7 (LXII 2012-2015)' => 'origin/data/leg-62',
-            'PR #6 (LXI 2009-2012)' => 'origin/data/leg-61',
+            'PR #22 (Congreso Baja California XVI-XXV)' => 'origin/data/congreso-bajacalifornia-historico',
+            'PR #21 (Congreso Sinaloa LVIII-LXV)'       => 'origin/data/congreso-sinaloa',
+            'PR #20 (Congreso Sonora LV-LXIV)'          => 'origin/data/congreso-sonora',
+            'PR #19 (Congreso Durango LXI-LXX)'         => 'origin/data/congreso-durango',
+            'PR #18 (Congreso Chihuahua LXII-LXVIII)'   => 'origin/data/congreso-chihuahua',
+            'PR #17 (Congreso Coahuila LVII-LXIII)'     => 'origin/data/congreso-coahuila',
+            'PR #16 (Congreso Nuevo León LXXI-LXXVII)'  => 'origin/data/congreso-nuevoleon',
         ];
         $allAudits = [];
         foreach ($prs as $prLabel => $branch) {
@@ -190,12 +197,13 @@ switch ($action) {
 
     case 'integrate:prs':
         $prs = [
-            'PR #11 (LXV 2021-2024)' => 'origin/data/leg-65',
-            'PR #10 (LXIV 2018-2021)' => 'origin/data/leg-64',
-            'PR #9 (LXIII 2015-2018)' => 'origin/data/leg-63',
-            'PR #8 (Congreso Tamaulipas)' => 'origin/data/congreso-tamaulipas',
-            'PR #7 (LXII 2012-2015)' => 'origin/data/leg-62',
-            'PR #6 (LXI 2009-2012)' => 'origin/data/leg-61',
+            'PR #22 (Congreso Baja California XVI-XXV)' => 'origin/data/congreso-bajacalifornia-historico',
+            'PR #21 (Congreso Sinaloa LVIII-LXV)'       => 'origin/data/congreso-sinaloa',
+            'PR #20 (Congreso Sonora LV-LXIV)'          => 'origin/data/congreso-sonora',
+            'PR #19 (Congreso Durango LXI-LXX)'         => 'origin/data/congreso-durango',
+            'PR #18 (Congreso Chihuahua LXII-LXVIII)'   => 'origin/data/congreso-chihuahua',
+            'PR #17 (Congreso Coahuila LVII-LXIII)'     => 'origin/data/congreso-coahuila',
+            'PR #16 (Congreso Nuevo León LXXI-LXXVII)'  => 'origin/data/congreso-nuevoleon',
         ];
         $integrated = [];
         foreach ($prs as $prLabel => $branch) {
@@ -254,7 +262,7 @@ switch ($action) {
                         $params[$k] = is_numeric($v) ? (int)$v : $v;
                     }
                 }
-            } elseif (in_array(strtolower($inp), ['sil', 'votaciones', 'asistencias', 'bc', 'bajacalifornia', 'bcs', 'bajacaliforniasur'])) {
+            } elseif (in_array(strtolower($inp), ['sil', 'votaciones', 'asistencias', 'bc', 'bajacalifornia', 'bcs', 'bajacaliforniasur', 'yuc', 'yucatan'])) {
                 $source = strtolower($inp);
             }
         }
