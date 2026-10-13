@@ -85,6 +85,22 @@ switch ($action) {
         $response = array_merge($response, $result);
         break;
 
+    case 'git:remote_branches':
+    case 'git:branches':
+        GitOps::execGit('fetch --all --prune');
+        $out = [];
+        exec('git --no-pager branch -r 2>&1', $out);
+        $branches = [];
+        foreach ($out as $line) {
+            $line = trim($line);
+            if ($line !== '' && !str_contains($line, '->')) {
+                $branches[] = $line;
+            }
+        }
+        $response['remote_branches'] = $branches;
+        $response['total'] = count($branches);
+        break;
+
     case 'git:sync_push':
         $fetchRes = GitOps::execGit('fetch origin main');
         $pullRes = GitOps::execGit('pull --rebase --autostash origin main');
@@ -193,15 +209,26 @@ switch ($action) {
         break;
 
     case 'audit:summary':
-        $prs = [
-            'PR #22' => ['branch' => 'origin/data/congreso-bajacalifornia-historico', 'name' => 'Baja California XVI-XXV'],
-            'PR #21' => ['branch' => 'origin/data/congreso-sinaloa', 'name' => 'Sinaloa LVIII-LXV'],
-            'PR #20' => ['branch' => 'origin/data/congreso-sonora', 'name' => 'Sonora LV-LXIV'],
-            'PR #19' => ['branch' => 'origin/data/congreso-durango', 'name' => 'Durango LXI-LXX'],
-            'PR #18' => ['branch' => 'origin/data/congreso-chihuahua', 'name' => 'Chihuahua LXII-LXVIII'],
-            'PR #17' => ['branch' => 'origin/data/congreso-coahuila', 'name' => 'Coahuila LVII-LXIII'],
-            'PR #16' => ['branch' => 'origin/data/congreso-nuevoleon', 'name' => 'Nuevo León LXXI-LXXVII'],
-        ];
+    case 'audit:all_branches':
+        $rawBranches = [];
+        exec('git --no-pager branch -r 2>&1', $rawBranches);
+        $prs = [];
+        foreach ($rawBranches as $b) {
+            $b = trim($b);
+            if ($b === '' || str_contains($b, '->') || $b === 'origin/main' || $b === 'origin/data/integracion-congresos-norte') {
+                continue;
+            }
+            $commits = [];
+            exec("git --no-pager log origin/main...{$b} --oneline 2>&1", $commits);
+            if (!empty($commits)) {
+                $branchClean = str_replace('origin/', '', $b);
+                $prs[$branchClean] = [
+                    'branch' => $b,
+                    'name' => $branchClean,
+                    'commits_ahead' => count($commits),
+                ];
+            }
+        }
         $summary = [];
         foreach ($prs as $prId => $info) {
             $branch = $info['branch'];
@@ -448,7 +475,7 @@ switch ($action) {
                         $params[$k] = is_numeric($v) ? (int)$v : $v;
                     }
                 }
-            } elseif (in_array(strtolower($inp), ['sil', 'votaciones', 'asistencias', 'bc', 'bajacalifornia', 'bcs', 'bajacaliforniasur', 'cam', 'campeche', 'yuc', 'yucatan', 'qroo', 'quintanaroo', 'sinaloa', 'sonora', 'durango', 'chihuahua', 'coahuila', 'nuevoleon'])) {
+            } elseif (in_array(strtolower($inp), ['sil', 'votaciones', 'asistencias', 'bc', 'bajacalifornia', 'bcs', 'bajacaliforniasur', 'cam', 'campeche', 'yuc', 'yucatan', 'qroo', 'quintanaroo', 'chis', 'chiapas', 'sinaloa', 'sonora', 'durango', 'chihuahua', 'coahuila', 'nuevoleon', 'tab', 'tabasco', 'congreso_tabasco'])) {
                 $source = strtolower($inp);
             }
         }

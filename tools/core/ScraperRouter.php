@@ -63,6 +63,10 @@ class ScraperRouter
             case 'quintanaroo':
                 return self::scrapeQuintanaRoo($config, $params);
 
+            case 'chis':
+            case 'chiapas':
+                return self::scrapeChiapas($config, $params);
+
             case 'sinaloa':
             case 'congreso_sinaloa':
                 return self::scrapeSinaloa($config, $params);
@@ -277,6 +281,24 @@ class ScraperRouter
         $modo = strtolower((string)($params['modo'] ?? 'todo'));
         if ($modo === 'actual' || $modo === '18' || (!empty($params['legislatura']) && (int)$params['legislatura'] === 18)) {
             return $service->scrapeLegislatura18();
+        }
+
+        if ($modo === 'historico' || $modo === 'historicas') {
+            return $service->scrapeTodasHistoricas();
+        }
+
+        return $service->scrapeTodo();
+    }
+
+    private static function scrapeChiapas(array $config, array $params): array
+    {
+        $logger = new Logger($config['paths']['logs'], 'ROUTER-CHIS');
+        $httpClient = new HttpClient($config['sil'], $logger);
+        $service = new \PulsoCivico\Services\CongresoChiapasScraperService($httpClient, $logger, $config['paths']['storage']);
+
+        $modo = strtolower((string)($params['modo'] ?? 'todo'));
+        if ($modo === 'actual' || $modo === '69' || (!empty($params['legislatura']) && (int)$params['legislatura'] === 69)) {
+            return $service->scrapeLegislatura69();
         }
 
         if ($modo === 'historico' || $modo === 'historicas') {

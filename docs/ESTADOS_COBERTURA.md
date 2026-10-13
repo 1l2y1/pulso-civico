@@ -44,7 +44,7 @@
 | 24 | **San Luis Potosí** | https://congresosanluis.gob.mx | — | 🙋 Disponible | — |
 | 25 | **Sinaloa** | https://www.congresosinaloa.gob.mx | — | 🙋 Disponible | — |
 | 26 | **Sonora** | https://www.congresoson.gob.mx | — | 🙋 Disponible | — |
-| 27 | **Tabasco** | https://congresotabasco.gob.mx | — | 🙋 Disponible | — |
+| 27 | **Tabasco** | https://congresotabasco.gob.mx | LXIII a LXV (3 legs, 105 dips) | ✅ Completado | Core |
 | 28 | **Tamaulipas** | https://www.congresotamaulipas.gob.mx | LVII a LXVI (10 legs, 306 dips) | ✅ Completado | PR #8 |
 | 29 | **Tlaxcala** | https://congresotlaxcala.gob.mx | — | 🙋 Disponible | — |
 | 30 | **Veracruz** | https://www.legisver.gob.mx | — | 🙋 Disponible | — |
