@@ -26,7 +26,7 @@
 | 06 | **Colima** | https://congresocolima.gob.mx | — | 🙋 Disponible | — |
 | 07 | **Chiapas** | https://www.congresochiapas.gob.mx | — | 🙋 Disponible | — |
 | 08 | **Chihuahua** | https://www.congresochihuahua.gob.mx | — | 🙋 Disponible | — |
-| 09 | **Ciudad de México** | https://www.congresocdmx.gob.mx | — | 🙋 Disponible | — |
+| 09 | **Ciudad de México** | https://www.congresocdmx.gob.mx | ALDF I-VII y CDMX I-III (10 legs, 660 dips) | ✅ Completado | PR #39 |
 | 10 | **Durango** | https://congresodurango.gob.mx | — | 🙋 Disponible | — |
 | 11 | **Guanajuato** | https://www.congresogto.gob.mx | — | 🙋 Disponible | — |
 | 12 | **Guerrero** | https://congresogro.gob.mx | — | 🙋 Disponible | — |

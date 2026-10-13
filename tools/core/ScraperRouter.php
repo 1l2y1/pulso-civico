@@ -46,11 +46,17 @@ class ScraperRouter
             case 'bajacalifornia':
                 return self::scrapeBajaCalifornia($config, $params);
 
+            case 'cdmx':
+            case 'ciudaddemexico':
+            case 'df':
+            case 'aldf':
+                return self::scrapeCdmx($config, $params);
+
             default:
                 return [
                     'ok' => false,
                     'error' => "Fuente de scraping '{$source}' no soportada.",
-                    'available_sources' => ['sil', 'votaciones', 'asistencias', 'bc'],
+                    'available_sources' => ['sil', 'votaciones', 'asistencias', 'bc', 'cdmx'],
                 ];
         }
     }
@@ -174,6 +180,19 @@ class ScraperRouter
         $service = new \PulsoCivico\Services\CongresoBajaCaliforniaScraperService($httpClient, $logger, $config['paths']['storage']);
 
         return $service->scrapeLegislatura25();
+    }
+
+    private static function scrapeCdmx(array $config, array $params): array
+    {
+        $logger = new Logger($config['paths']['logs'], 'ROUTER-CDMX');
+        $httpClient = new HttpClient($config['sil'], $logger);
+        $service = new \PulsoCivico\Services\CongresoCdmxScraperService($httpClient, $logger, $config['paths']['storage']);
+
+        if (!empty($params['key'])) {
+            return $service->scrapeLegislaturaKey((string)$params['key']);
+        }
+
+        return $service->scrapeAll();
     }
 }
 
