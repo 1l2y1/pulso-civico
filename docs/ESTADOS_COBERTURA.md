@@ -47,7 +47,7 @@
 | 27 | **Tabasco** | https://congresotabasco.gob.mx | — | 🙋 Disponible | — |
 | 28 | **Tamaulipas** | https://www.congresotamaulipas.gob.mx | LVII a LXVI (10 legs, 306 dips) | ✅ Completado | PR #8 |
 | 29 | **Tlaxcala** | https://congresotlaxcala.gob.mx | — | 🙋 Disponible | — |
-| 30 | **Veracruz** | https://www.legisver.gob.mx | — | 🙋 Disponible | — |
+| 30 | **Veracruz** | https://www.legisver.gob.mx | LVIII a LXVII (7 legs, 324 dips) | ✅ Completado | PR #43 |
 | 31 | **Yucatán** | https://www.congresoyucatan.gob.mx | — | 🙋 Disponible | — |
 | 32 | **Zacatecas** | https://www.congresozac.gob.mx | — | 🙋 Disponible | — |
 
