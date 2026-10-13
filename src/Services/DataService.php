@@ -1190,13 +1190,19 @@ class DataService
         }
         unset($h);
 
-        // Incorporar el cargo parlamentario actual como el nodo supremo y activo de la línea de tiempo
+        // Incorporar el cargo parlamentario del mandato a la línea de tiempo
         $camara = $pol['camara'] ?? 'Diputados';
         $esSenador = ($camara === 'Senadores');
-        $anoInicio = 2024;
+        $legNum = (int)($pol['legislatura'] ?? 66);
+        $legMeta = self::LEGISLATURAS_CATALOG[$legNum] ?? null;
+        $legRomano = $legMeta['romano'] ?? self::convertirNumeroARomano($legNum);
+
+        $anoInicio = $legMeta['ano_inicio'] ?? 2024;
         if (!empty($pol['fecha_toma_protesta']) && preg_match('/(\d{4})/', (string)$pol['fecha_toma_protesta'], $mAno)) {
             $anoInicio = (int)$mAno[1];
         }
+        $anoFin = $legMeta['ano_fin'] ?? ($anoInicio + 3);
+
         $entidad = $pol['entidad'] ?? 'México';
         $distrito = $pol['distrito'] ?? null;
         $esSuplente = (($pol['tipo_cargo'] ?? '') === 'Suplente');
@@ -1215,22 +1221,25 @@ class DataService
         if ($distrito && !str_contains($distrito, 'Senaduría')) {
             $descripcionCargo .= " ({$distrito})";
         }
-        $descripcionCargo .= " — LXVI Legislatura del Congreso de la Unión.";
+        $descripcionCargo .= " — {$legRomano} Legislatura del Congreso de la Unión.";
 
+        $esActual = ($legNum === 66);
         $cargoActual = [
             'experiencia' => $descripcionCargo,
             'del_ano' => (string)$anoInicio,
-            'al_ano' => $tieneLicencia ? 'En Licencia' : 'Presente',
-            'periodo' => $tieneLicencia ? "{$anoInicio} — En Licencia" : "{$anoInicio} — Presente",
-            'es_cargo_actual' => true,
-            'es_reciente' => true,
+            'al_ano' => $esActual ? ($tieneLicencia ? 'En Licencia' : 'Presente') : (string)$anoFin,
+            'periodo' => $esActual 
+                ? ($tieneLicencia ? "{$anoInicio} — En Licencia" : "{$anoInicio} — Presente")
+                : "{$anoInicio} — {$anoFin}",
+            'es_cargo_actual' => $esActual,
+            'es_reciente' => $esActual,
             'en_licencia' => $tieneLicencia,
         ];
 
-        // Verificar si ya existe mención para evitar duplicidad
+        // Verificar si ya existe mención exacta para evitar duplicidad
         $yaExisteCargoActual = false;
         foreach ($historialFiltrado as $hf) {
-            if (str_contains($hf['experiencia'] ?? '', 'LXVI Legislatura') || str_contains($hf['experiencia'] ?? '', '66 Legislatura')) {
+            if (str_contains($hf['experiencia'] ?? '', "{$legRomano} Legislatura") || str_contains($hf['experiencia'] ?? '', "{$legNum} Legislatura")) {
                 $yaExisteCargoActual = true;
                 break;
             }
