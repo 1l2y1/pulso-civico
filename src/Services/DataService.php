@@ -574,6 +574,14 @@ class DataService
     }
 
     /**
+     * Alias de conveniencia para convertir número a romano.
+     */
+    public static function numeroALegislaturaRomano(int $numero): string
+    {
+        return self::convertirNumeroARomano($numero);
+    }
+
+    /**
      * Catálogo maestro de legislaturas federales.
      */
     public function getLegislaturasCatalog(): array
