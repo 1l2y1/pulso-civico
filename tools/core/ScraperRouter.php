@@ -173,7 +173,12 @@ class ScraperRouter
         $httpClient = new HttpClient($config['sil'], $logger);
         $service = new \PulsoCivico\Services\CongresoBajaCaliforniaScraperService($httpClient, $logger, $config['paths']['storage']);
 
-        return $service->scrapeLegislatura25();
+        $leg = $params['legislatura'] ?? 'all';
+        if ($leg === 'all' || $leg === 'todas') {
+            return $service->scrapeAll();
+        }
+
+        return $service->scrapeLegislatura((int)$leg);
     }
 }
 
