@@ -46,11 +46,15 @@ class ScraperRouter
             case 'bajacalifornia':
                 return self::scrapeBajaCalifornia($config, $params);
 
+            case 'nayarit':
+            case 'nay':
+                return self::scrapeNayarit($config, $params);
+
             default:
                 return [
                     'ok' => false,
                     'error' => "Fuente de scraping '{$source}' no soportada.",
-                    'available_sources' => ['sil', 'votaciones', 'asistencias', 'bc'],
+                    'available_sources' => ['sil', 'votaciones', 'asistencias', 'bc', 'nayarit'],
                 ];
         }
     }
@@ -174,6 +178,20 @@ class ScraperRouter
         $service = new \PulsoCivico\Services\CongresoBajaCaliforniaScraperService($httpClient, $logger, $config['paths']['storage']);
 
         return $service->scrapeLegislatura25();
+    }
+
+    private static function scrapeNayarit(array $config, array $params): array
+    {
+        $logger = new Logger($config['paths']['logs'], 'ROUTER-NAYARIT');
+        $httpClient = new HttpClient($config['sil'], $logger);
+        $service = new \PulsoCivico\Services\CongresoNayaritScraperService($httpClient, $logger, $config['paths']['storage']);
+
+        $leg = $params['legislatura'] ?? 'all';
+        if ($leg === 'all' || $leg === 'todas') {
+            return $service->scrapeAll();
+        }
+
+        return $service->scrapeLegislatura((int)$leg);
     }
 }
 
