@@ -23,7 +23,7 @@
 | 03 | **Baja California Sur** | https://www.cbcs.gob.mx | — | 🙋 Disponible | — |
 | 04 | **Campeche** | https://congresocampeche.gob.mx | — | 🙋 Disponible | — |
 | 05 | **Coahuila** | https://congresocoahuila.gob.mx | — | 🙋 Disponible | — |
-| 06 | **Colima** | https://congresocolima.gob.mx | — | 🙋 Disponible | — |
+| 06 | **Colima** | https://congresocolima.gob.mx | LII a LXI (10 legs, 248 dips) | ✅ Completado | PR #46 |
 | 07 | **Chiapas** | https://www.congresochiapas.gob.mx | — | 🙋 Disponible | — |
 | 08 | **Chihuahua** | https://www.congresochihuahua.gob.mx | — | 🙋 Disponible | — |
 | 09 | **Ciudad de México** | https://www.congresocdmx.gob.mx | — | 🙋 Disponible | — |
