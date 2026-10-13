@@ -246,7 +246,7 @@ switch ($action) {
                         $params[$k] = is_numeric($v) ? (int)$v : $v;
                     }
                 }
-            } elseif (in_array(strtolower($inp), ['sil', 'votaciones', 'asistencias', 'bc', 'bajacalifornia'])) {
+            } elseif (in_array(strtolower($inp), ['sil', 'votaciones', 'asistencias', 'bc', 'bajacalifornia', 'puebla', 'pue'])) {
                 $source = strtolower($inp);
             }
         }
