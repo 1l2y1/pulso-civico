@@ -246,12 +246,20 @@ switch ($action) {
                         $params[$k] = is_numeric($v) ? (int)$v : $v;
                     }
                 }
-            } elseif (in_array(strtolower($inp), ['sil', 'votaciones', 'asistencias', 'bc', 'bajacalifornia'])) {
+            } elseif (in_array(strtolower($inp), ['sil', 'votaciones', 'asistencias', 'bc', 'bajacalifornia', 'tabasco', 'tab'])) {
                 $source = strtolower($inp);
             }
         }
         $response['parsed_params'] = $params;
         $result = ScraperRouter::run($rootDir, $source, $params);
+        $response = array_merge($response, $result);
+        break;
+
+    case 'scrape:tabasco':
+    case 'scrape:tab':
+    case 'tabasco':
+        $leg = $target !== '' ? (int)$target : 0;
+        $result = ScraperRouter::run($rootDir, 'tabasco', ['legislatura' => $leg]);
         $response = array_merge($response, $result);
         break;
 

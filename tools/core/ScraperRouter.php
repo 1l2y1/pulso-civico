@@ -46,11 +46,15 @@ class ScraperRouter
             case 'bajacalifornia':
                 return self::scrapeBajaCalifornia($config, $params);
 
+            case 'tabasco':
+            case 'tab':
+                return self::scrapeTabasco($config, $params);
+
             default:
                 return [
                     'ok' => false,
                     'error' => "Fuente de scraping '{$source}' no soportada.",
-                    'available_sources' => ['sil', 'votaciones', 'asistencias', 'bc'],
+                    'available_sources' => ['sil', 'votaciones', 'asistencias', 'bc', 'tabasco'],
                 ];
         }
     }
@@ -174,6 +178,42 @@ class ScraperRouter
         $service = new \PulsoCivico\Services\CongresoBajaCaliforniaScraperService($httpClient, $logger, $config['paths']['storage']);
 
         return $service->scrapeLegislatura25();
+    }
+
+    private static function scrapeTabasco(array $config, array $params): array
+    {
+        $logger = new Logger($config['paths']['logs'], 'ROUTER-TABASCO');
+        $httpClient = new HttpClient($config['sil'], $logger);
+        $service = new \PulsoCivico\Services\CongresoTabascoScraperService($httpClient, $logger, $config['paths']['storage']);
+
+        $leg = isset($params['legislatura']) ? (int)$params['legislatura'] : 0;
+        if ($leg > 0) {
+            $data = $service->scrapeLegislatura($leg);
+            return [
+                'ok' => true,
+                'entidad' => 'Tabasco',
+                'legislatura' => $leg,
+                'total_diputados' => count($data),
+                'muestra' => array_slice($data, 0, 3),
+            ];
+        }
+
+        $all = $service->scrapeAll();
+        $total = 0;
+        $resumen = [];
+        foreach ($all as $num => $dips) {
+            $count = count($dips);
+            $total += $count;
+            $resumen["leg_{$num}"] = $count;
+        }
+
+        return [
+            'ok' => true,
+            'entidad' => 'Tabasco',
+            'total_legislaturas' => count($all),
+            'total_diputados' => $total,
+            'desglose' => $resumen,
+        ];
     }
 }
 
