@@ -46,11 +46,15 @@ class ScraperRouter
             case 'bajacalifornia':
                 return self::scrapeBajaCalifornia($config, $params);
 
+            case 'bcs':
+            case 'bajacaliforniasur':
+                return self::scrapeBajaCaliforniaSur($config, $params);
+
             default:
                 return [
                     'ok' => false,
                     'error' => "Fuente de scraping '{$source}' no soportada.",
-                    'available_sources' => ['sil', 'votaciones', 'asistencias', 'bc'],
+                    'available_sources' => ['sil', 'votaciones', 'asistencias', 'bc', 'bcs'],
                 ];
         }
     }
@@ -174,6 +178,24 @@ class ScraperRouter
         $service = new \PulsoCivico\Services\CongresoBajaCaliforniaScraperService($httpClient, $logger, $config['paths']['storage']);
 
         return $service->scrapeLegislatura25();
+    }
+
+    private static function scrapeBajaCaliforniaSur(array $config, array $params): array
+    {
+        $logger = new Logger($config['paths']['logs'], 'ROUTER-BCS');
+        $httpClient = new HttpClient($config['sil'], $logger);
+        $service = new \PulsoCivico\Services\CongresoBcsScraperService($httpClient, $logger, $config['paths']['storage']);
+
+        $modo = strtolower((string)($params['modo'] ?? 'todo'));
+        if ($modo === 'actual' || $modo === '17' || (!empty($params['legislatura']) && (int)$params['legislatura'] === 17)) {
+            return $service->scrapeLegislatura17();
+        }
+
+        if ($modo === 'historico' || $modo === 'historicas') {
+            return $service->scrapeTodasHistoricas();
+        }
+
+        return $service->scrapeTodo();
     }
 }
 
