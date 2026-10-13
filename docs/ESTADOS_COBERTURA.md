@@ -31,7 +31,7 @@
 | 11 | **Guanajuato** | https://www.congresogto.gob.mx | — | 🙋 Disponible | — |
 | 12 | **Guerrero** | https://congresogro.gob.mx | — | 🙋 Disponible | — |
 | 13 | **Hidalgo** | https://www.congresohidalgo.gob.mx | — | 🙋 Disponible | — |
-| 14 | **Jalisco** | https://www.congresojal.gob.mx | — | 🙋 Disponible | — |
+| 14 | **Jalisco** | https://www.congresojal.gob.mx | LV a LXIV (1998-2027, 391 dips) | ✅ Completado | PR #32 |
 | 15 | **Estado de México** | https://legislativoedomex.gob.mx | — | 🙋 Disponible | — |
 | 16 | **Michoacán** | https://congresomich.gob.mx | — | 🙋 Disponible | — |
 | 17 | **Morelos** | https://congresomorelos.gob.mx | — | 🙋 Disponible | — |
