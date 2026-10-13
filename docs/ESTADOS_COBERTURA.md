@@ -28,7 +28,7 @@
 | 08 | **Chihuahua** | https://www.congresochihuahua.gob.mx | — | 🙋 Disponible | — |
 | 09 | **Ciudad de México** | https://www.congresocdmx.gob.mx | — | 🙋 Disponible | — |
 | 10 | **Durango** | https://congresodurango.gob.mx | — | 🙋 Disponible | — |
-| 11 | **Guanajuato** | https://www.congresogto.gob.mx | — | 🙋 Disponible | — |
+| 11 | **Guanajuato** | https://www.congresogto.gob.mx | LV a LXVI (1991-2027, 418 dips) | ✅ Completado | PR #30 |
 | 12 | **Guerrero** | https://congresogro.gob.mx | — | 🙋 Disponible | — |
 | 13 | **Hidalgo** | https://www.congresohidalgo.gob.mx | — | 🙋 Disponible | — |
 | 14 | **Jalisco** | https://www.congresojal.gob.mx | — | 🙋 Disponible | — |
