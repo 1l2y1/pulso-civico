@@ -13,6 +13,11 @@ storage/raw/cookie.txt
 storage/raw/html/
 storage/raw/*.txt
 storage/raw/*.html
+storage/raw/durango/
+storage/raw/chihuahua/
+storage/raw/coahuila/
+storage/raw/nuevoleon/
+storage/raw/tamaulipas/
 
 # --- Logs ---
 storage/logs/*
