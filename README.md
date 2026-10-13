@@ -60,6 +60,7 @@ Atajo en Windows: `powershell -ExecutionPolicy Bypass -File .\tools\run.ps1 <acc
 | [AGENTS.md](AGENTS.md) | Reglas para asistentes de IA (Cursor, Claude, Copilot, Gemini, ChatGPT) |
 | [docs/ARQUITECTURA.md](docs/ARQUITECTURA.md) | Cómo está organizado el código |
 | [docs/DATA_SCHEMA.md](docs/DATA_SCHEMA.md) | Formato estándar de los datos |
+| [docs/PLAYBOOK_LOCALES.md](docs/PLAYBOOK_LOCALES.md) | Extracción de datos locales con agentes de IA (Claude/Codex) |
 | [docs/FUENTES.md](docs/FUENTES.md) | Portales oficiales: cubiertos y pendientes |
 | [docs/COMO_CREAR_UN_SCRAPER.md](docs/COMO_CREAR_UN_SCRAPER.md) | Agregar una nueva legislatura o fuente |
 | [CODE_OF_CONDUCT.md](CODE_OF_CONDUCT.md) | Convivencia y neutralidad |
