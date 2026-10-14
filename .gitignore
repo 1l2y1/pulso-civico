@@ -27,6 +27,8 @@ index.old.php
 *.bak
 *.old
 *.orig
+*.tar.gz
+storage/backup_*
 *~
 
 # --- Dependencias (si se agregan en el futuro) ---
