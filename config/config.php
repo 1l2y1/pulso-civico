@@ -50,6 +50,9 @@ return [
         'user_agent' => $env('HTTP_USER_AGENT', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36'),
         // Verificación SSL: recomendado true. Algunos XAMPP en Windows no traen CA bundle; usar false solo en local.
         'verify_ssl' => $envBool('HTTP_VERIFY_SSL', false),
+        // Soporte para túneles VPN y proxies (útil para scrapers distribuidos)
+        'proxy' => $env('HTTP_PROXY', ''),
+        'interface' => $env('HTTP_INTERFACE', ''),
     ],
     'paths' => [
         'root' => dirname(__DIR__),

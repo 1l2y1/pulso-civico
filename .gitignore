@@ -14,9 +14,11 @@ storage/raw/html/
 storage/raw/*.txt
 storage/raw/*.html
 
-# --- Logs ---
+# --- Logs y staging ---
 storage/logs/*
 !storage/logs/.gitkeep
+storage/staging/*
+!storage/staging/.gitkeep
 *.log
 *.jsonl
 

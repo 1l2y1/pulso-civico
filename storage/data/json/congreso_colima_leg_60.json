@@ -1,0 +1,1312 @@
+{
+    "metadata": {
+        "titulo": "H. Congreso del Estado de Colima - LX Legislatura (2021-2024) [Consolidado]",
+        "entidad": "Colima",
+        "camara": "Congreso Local",
+        "legislatura": 60,
+        "periodo": "2021-2024",
+        "generado_en": "2026-10-13T23:36:25+00:00",
+        "fuente_url": "https://congresocol.gob.mx/web/www/diputados/index.php?idt=",
+        "total_legisladores": 25,
+        "nodos_fuente": 2,
+        "merkle_root_evidencia": "1e7f9f9d7f7c7648c2c48b6eefdf416ae5b0d9414956830ad7b6860c2c905399"
+    },
+    "legisladores": [
+        {
+            "referencia_sil": "col_leg60_097",
+            "nombre_completo": "Martha Fernanda Salazar Martínez",
+            "camara": "Congreso del Estado de Colima",
+            "legislatura": 60,
+            "partido": "PAN",
+            "principio_eleccion": "Mayoría Relativa",
+            "entidad": "Colima",
+            "distrito": "Distrito I (  Colima-Noreste)",
+            "tipo_cargo": "Propietario",
+            "suplente_nombre": null,
+            "fecha_toma_protesta": "2021-10-01",
+            "fecha_nacimiento": null,
+            "correo_institucional": "fernandasalazar@congresocol.gob.mx",
+            "telefono": "(312) 31 2 1159",
+            "ubicacion_oficina": "Calzada Galván y los Regalado, Colima, Col.",
+            "ultimo_grado_estudios": null,
+            "preparacion_academica": null,
+            "experiencia_legislativa_resumen": null,
+            "foto_oficial_url": "https://congresocol.gob.mx/web/Sistema/uploads/Diputados/60/martha_salazar.JPG",
+            "foto_local_path": null,
+            "curriculum_url": "https://congresocol.gob.mx/web/Sistema/uploads/curriculum/60/diputados/Dip_Fernanda_Salazar_Martinez.pdf",
+            "total_comisiones": 3,
+            "comisiones": [
+                {
+                    "nombre": "Anticorrupción y Transparencia Gubernamental",
+                    "cargo": "Secretaria"
+                },
+                {
+                    "nombre": "Desarrollo Económico",
+                    "cargo": "Vocal"
+                },
+                {
+                    "nombre": "Desarrollo Municipal",
+                    "cargo": "Presidenta"
+                }
+            ],
+            "trayectoria_politica": [],
+            "trayectoria_legislativa": [],
+            "trayectoria_administrativa": [],
+            "escolaridad_detalle": [],
+            "licencias": [],
+            "iniciativas": [],
+            "puntos_acuerdo": [],
+            "redes_sociales": [],
+            "metadata": {
+                "fuente_url": "https://congresocol.gob.mx/web/www/diputados/index2.php?id=97&vlegis=60",
+                "sha256_evidencia": "b25b91196b190f7b08eea876832b5ea7546c501811406e12321cd6877633fcc0",
+                "fecha_extraccion": "2026-10-13 23:35:54",
+                "entidad_tipo": "Congreso Local",
+                "node_id": 1
+            }
+        },
+        {
+            "referencia_sil": "col_leg60_098",
+            "nombre_completo": "Priscila García Delgado",
+            "camara": "Congreso del Estado de Colima",
+            "legislatura": 60,
+            "partido": "MORENA",
+            "principio_eleccion": "Mayoría Relativa",
+            "entidad": "Colima",
+            "distrito": "Distrito II (  Colima-Centro)",
+            "tipo_cargo": "Propietario",
+            "suplente_nombre": null,
+            "fecha_toma_protesta": "2021-10-01",
+            "fecha_nacimiento": null,
+            "correo_institucional": "priscilagarcia@congresocol.gob.mx",
+            "telefono": "(312) 31 2 1159",
+            "ubicacion_oficina": "Calzada Galván y los Regalado, Colima, Col.",
+            "ultimo_grado_estudios": null,
+            "preparacion_academica": null,
+            "experiencia_legislativa_resumen": null,
+            "foto_oficial_url": "https://congresocol.gob.mx/web/Sistema/uploads/Diputados/60/priscilagarcia.jpg",
+            "foto_local_path": null,
+            "curriculum_url": "https://congresocol.gob.mx/web/Sistema/uploads/curriculum/60/diputados/D_Priscila_Garcia_Delgado.pdf",
+            "total_comisiones": 4,
+            "comisiones": [
+                {
+                    "nombre": "Anticorrupción y Transparencia Gubernamental",
+                    "cargo": "Vocal"
+                },
+                {
+                    "nombre": "Desarrollo Municipal",
+                    "cargo": "Secretaria"
+                },
+                {
+                    "nombre": "Educación, Cultura, Ciencia y Tecnología",
+                    "cargo": "Vocal"
+                },
+                {
+                    "nombre": "Presupuesto y Disciplina Financiera",
+                    "cargo": "Vocal"
+                }
+            ],
+            "trayectoria_politica": [],
+            "trayectoria_legislativa": [],
+            "trayectoria_administrativa": [],
+            "escolaridad_detalle": [],
+            "licencias": [],
+            "iniciativas": [],
+            "puntos_acuerdo": [],
+            "redes_sociales": [],
+            "metadata": {
+                "fuente_url": "https://congresocol.gob.mx/web/www/diputados/index2.php?id=98&vlegis=60",
+                "sha256_evidencia": "08d8570ce628901c07e9d7b7d5a945aa060ccf8c0b371f7017d0a2e4d15b64af",
+                "fecha_extraccion": "2026-10-13 23:35:54",
+                "entidad_tipo": "Congreso Local",
+                "node_id": 1
+            }
+        },
+        {
+            "referencia_sil": "col_leg60_099",
+            "nombre_completo": "Alfredo Álvarez Ramírez",
+            "camara": "Congreso del Estado de Colima",
+            "legislatura": 60,
+            "partido": "MORENA",
+            "principio_eleccion": "Mayoría Relativa",
+            "entidad": "Colima",
+            "distrito": "Distrito III ( Colima-Sur)",
+            "tipo_cargo": "Propietario",
+            "suplente_nombre": null,
+            "fecha_toma_protesta": "2021-10-01",
+            "fecha_nacimiento": null,
+            "correo_institucional": "alfredoalvarez@congresocol.gob.mx",
+            "telefono": "(312) 31 2 1159",
+            "ubicacion_oficina": "Calzada Galván y los Regalado, Colima, Col.",
+            "ultimo_grado_estudios": null,
+            "preparacion_academica": null,
+            "experiencia_legislativa_resumen": null,
+            "foto_oficial_url": "https://congresocol.gob.mx/web/Sistema/uploads/Diputados/60/alfredo_alvarez.jpg",
+            "foto_local_path": null,
+            "curriculum_url": "https://congresocol.gob.mx/web/Sistema/uploads/curriculum/60/diputados/Dip_Alfredo_Alvarez_Ramirez.pdf",
+            "total_comisiones": 3,
+            "comisiones": [
+                {
+                    "nombre": "Desarrollo Municipal",
+                    "cargo": "Secretario"
+                },
+                {
+                    "nombre": "Desarrollo Rural Sustentable",
+                    "cargo": "Presidente"
+                },
+                {
+                    "nombre": "Desarrollo Urbano, Medio Ambiente y Movilidad",
+                    "cargo": "Secretario"
+                }
+            ],
+            "trayectoria_politica": [],
+            "trayectoria_legislativa": [],
+            "trayectoria_administrativa": [],
+            "escolaridad_detalle": [],
+            "licencias": [],
+            "iniciativas": [],
+            "puntos_acuerdo": [],
+            "redes_sociales": [],
+            "metadata": {
+                "fuente_url": "https://congresocol.gob.mx/web/www/diputados/index2.php?id=99&vlegis=60",
+                "sha256_evidencia": "7b71512a38656bc6aacb668fa940dc98aea4a44ab0399db9629e70e071df75e7",
+                "fecha_extraccion": "2026-10-13 23:35:54",
+                "entidad_tipo": "Congreso Local",
+                "node_id": 1
+            }
+        },
+        {
+            "referencia_sil": "col_leg60_100",
+            "nombre_completo": "Miguel Ángel Galindo Barragán",
+            "camara": "Congreso del Estado de Colima",
+            "legislatura": 60,
+            "partido": "PRI",
+            "principio_eleccion": "Mayoría Relativa",
+            "entidad": "Colima",
+            "distrito": "Distrito IV ( Comala)",
+            "tipo_cargo": "Propietario",
+            "suplente_nombre": null,
+            "fecha_toma_protesta": "2021-10-01",
+            "fecha_nacimiento": null,
+            "correo_institucional": "miguelangelgalindo@congresocol.gob.mx",
+            "telefono": "(312) 31 2 1159",
+            "ubicacion_oficina": "Calzada Galván y los Regalado, Colima, Col.",
+            "ultimo_grado_estudios": null,
+            "preparacion_academica": null,
+            "experiencia_legislativa_resumen": null,
+            "foto_oficial_url": "https://congresocol.gob.mx/web/Sistema/uploads/Diputados/60/miguel_galindo.jpg",
+            "foto_local_path": null,
+            "curriculum_url": "https://congresocol.gob.mx/web/Sistema/uploads/curriculum/60/diputados/Dip_Miguel_Angel_Galindo_Barragan.pdf",
+            "total_comisiones": 3,
+            "comisiones": [
+                {
+                    "nombre": "Desarrollo Económico",
+                    "cargo": "Presidente"
+                },
+                {
+                    "nombre": "Desarrollo Rural Sustentable",
+                    "cargo": "Secretario"
+                },
+                {
+                    "nombre": "Estudios Legislativos y Puntos Constitucionales",
+                    "cargo": "Vocal"
+                }
+            ],
+            "trayectoria_politica": [],
+            "trayectoria_legislativa": [],
+            "trayectoria_administrativa": [],
+            "escolaridad_detalle": [],
+            "licencias": [],
+            "iniciativas": [],
+            "puntos_acuerdo": [],
+            "redes_sociales": [],
+            "metadata": {
+                "fuente_url": "https://congresocol.gob.mx/web/www/diputados/index2.php?id=100&vlegis=60",
+                "sha256_evidencia": "e65b9ac362b57ff2a0f99354979f007c0c46e86aaffccbc4c88c751ae94bcfa7",
+                "fecha_extraccion": "2026-10-13 23:35:54",
+                "entidad_tipo": "Congreso Local",
+                "node_id": 1
+            }
+        },
+        {
+            "referencia_sil": "col_leg60_101",
+            "nombre_completo": "Myriam Gudiño Espíndola",
+            "camara": "Congreso del Estado de Colima",
+            "legislatura": 60,
+            "partido": "SIN PARTIDO",
+            "principio_eleccion": "Mayoría Relativa",
+            "entidad": "Colima",
+            "distrito": "Distrito V ( Coquimatlán)",
+            "tipo_cargo": "Propietario",
+            "suplente_nombre": null,
+            "fecha_toma_protesta": "2021-10-01",
+            "fecha_nacimiento": null,
+            "correo_institucional": "myriamgudino@congresocol.gob.mx",
+            "telefono": "(312) 31 2 1159",
+            "ubicacion_oficina": "Calzada Galván y los Regalado, Colima, Col.",
+            "ultimo_grado_estudios": null,
+            "preparacion_academica": null,
+            "experiencia_legislativa_resumen": null,
+            "foto_oficial_url": "https://congresocol.gob.mx/web/Sistema/uploads/Diputados/60/myriam_gudino.JPG",
+            "foto_local_path": null,
+            "curriculum_url": "https://congresocol.gob.mx/web/Sistema/uploads/curriculum/60/diputados/DiputadaMiryamGEspindola.pdf",
+            "total_comisiones": 5,
+            "comisiones": [
+                {
+                    "nombre": "Anticorrupción y Transparencia Gubernamental",
+                    "cargo": "Presidenta"
+                },
+                {
+                    "nombre": "Educación, Cultura, Ciencia y Tecnología",
+                    "cargo": "Presidenta"
+                },
+                {
+                    "nombre": "Responsabilidades",
+                    "cargo": "Vocal"
+                },
+                {
+                    "nombre": "Salud y Deporte",
+                    "cargo": "Vocal"
+                },
+                {
+                    "nombre": "Vigilancia del Órgano Superior de Auditoría y Fiscalización Gubernamental del Estado",
+                    "cargo": "Vocal"
+                }
+            ],
+            "trayectoria_politica": [],
+            "trayectoria_legislativa": [],
+            "trayectoria_administrativa": [],
+            "escolaridad_detalle": [],
+            "licencias": [],
+            "iniciativas": [],
+            "puntos_acuerdo": [],
+            "redes_sociales": [],
+            "metadata": {
+                "fuente_url": "https://congresocol.gob.mx/web/www/diputados/index2.php?id=101&vlegis=60",
+                "sha256_evidencia": "7f009c78bb3ae5b5affaf194a64847cd9c192fd3d500f8bf0a3fc30d654a1b37",
+                "fecha_extraccion": "2026-10-13 23:35:54",
+                "entidad_tipo": "Congreso Local",
+                "node_id": 1
+            }
+        },
+        {
+            "referencia_sil": "col_leg60_102",
+            "nombre_completo": "Ma. Engracia Plascencia Silva",
+            "camara": "Congreso del Estado de Colima",
+            "legislatura": 60,
+            "partido": "PRI",
+            "principio_eleccion": "Mayoría Relativa",
+            "entidad": "Colima",
+            "distrito": "Distrito VI ( Cuauhtémoc)",
+            "tipo_cargo": "Propietario",
+            "suplente_nombre": null,
+            "fecha_toma_protesta": "2021-10-01",
+            "fecha_nacimiento": null,
+            "correo_institucional": "lizziemoreno@congresocol.gob.mx",
+            "telefono": "(312) 31 2 1159",
+            "ubicacion_oficina": "Calzada Galván y los Regalado, Colima, Col.",
+            "ultimo_grado_estudios": null,
+            "preparacion_academica": null,
+            "experiencia_legislativa_resumen": null,
+            "foto_oficial_url": "https://congresocol.gob.mx/web/Sistema/uploads/Diputados/60/Plascenciasilva.jpeg",
+            "foto_local_path": null,
+            "curriculum_url": "https://congresocol.gob.mx/web/Sistema/uploads/curriculum/60/diputados/Dip_Hilda_Lizette_Moreno_Ceballos.pdf",
+            "total_comisiones": 1,
+            "comisiones": [
+                {
+                    "nombre": "Hacienda, Fiscalización y Cuenta Pública",
+                    "cargo": "Presidenta"
+                }
+            ],
+            "trayectoria_politica": [],
+            "trayectoria_legislativa": [],
+            "trayectoria_administrativa": [],
+            "escolaridad_detalle": [],
+            "licencias": [],
+            "iniciativas": [],
+            "puntos_acuerdo": [],
+            "redes_sociales": [],
+            "metadata": {
+                "fuente_url": "https://congresocol.gob.mx/web/www/diputados/index2.php?id=102&vlegis=60",
+                "sha256_evidencia": "dcbc8b1ace97c8eb96389055984638ad5eb59425b87c014214266d4a71cfe69b",
+                "fecha_extraccion": "2026-10-13 23:35:54",
+                "entidad_tipo": "Congreso Local",
+                "node_id": 1
+            }
+        },
+        {
+            "referencia_sil": "col_leg60_103",
+            "nombre_completo": "José de Jesús Dueñas García",
+            "camara": "Congreso del Estado de Colima",
+            "legislatura": 60,
+            "partido": "MC",
+            "principio_eleccion": "Mayoría Relativa",
+            "entidad": "Colima",
+            "distrito": "Distrito VII ( Villa de Alvarez-Noreste)",
+            "tipo_cargo": "Propietario",
+            "suplente_nombre": null,
+            "fecha_toma_protesta": "2021-10-01",
+            "fecha_nacimiento": null,
+            "correo_institucional": "selenecarrillo@congresocol.gob.mx",
+            "telefono": "(312) 31 2 1159",
+            "ubicacion_oficina": "Calzada Galván y los Regalado, Colima, Col.",
+            "ultimo_grado_estudios": null,
+            "preparacion_academica": null,
+            "experiencia_legislativa_resumen": null,
+            "foto_oficial_url": "https://congresocol.gob.mx/web/Sistema/uploads/Diputados/60/jesus_duenas.JPG",
+            "foto_local_path": null,
+            "curriculum_url": "https://congresocol.gob.mx/web/Sistema/uploads/curriculum/60/diputados/D_Jesus_Duenas_Garcia.pdf",
+            "total_comisiones": 3,
+            "comisiones": [
+                {
+                    "nombre": "Derechos Humanos",
+                    "cargo": "Secretario"
+                },
+                {
+                    "nombre": "Desarrollo Económico",
+                    "cargo": "Secretario"
+                },
+                {
+                    "nombre": "Salud y Deporte",
+                    "cargo": "Vocal"
+                }
+            ],
+            "trayectoria_politica": [],
+            "trayectoria_legislativa": [],
+            "trayectoria_administrativa": [],
+            "escolaridad_detalle": [],
+            "licencias": [],
+            "iniciativas": [],
+            "puntos_acuerdo": [],
+            "redes_sociales": [],
+            "metadata": {
+                "fuente_url": "https://congresocol.gob.mx/web/www/diputados/index2.php?id=103&vlegis=60",
+                "sha256_evidencia": "53614799ce27d041b64462f3b16ace7bfd3927608bca75ac71532eb1f6a913bc",
+                "fecha_extraccion": "2026-10-13 23:35:54",
+                "entidad_tipo": "Congreso Local",
+                "node_id": 1
+            }
+        },
+        {
+            "referencia_sil": "col_leg60_104",
+            "nombre_completo": "Héctor Magaña Lara",
+            "camara": "Congreso del Estado de Colima",
+            "legislatura": 60,
+            "partido": "PRI",
+            "principio_eleccion": "Mayoría Relativa",
+            "entidad": "Colima",
+            "distrito": "Distrito VIII ( Villa de Alvarez-Suroeste)",
+            "tipo_cargo": "Propietario",
+            "suplente_nombre": null,
+            "fecha_toma_protesta": "2021-10-01",
+            "fecha_nacimiento": null,
+            "correo_institucional": "hectormagana@congresocol.gob.mx",
+            "telefono": "(312) 31 2 1159",
+            "ubicacion_oficina": "Calzada Galván y los Regalado, Colima, Col.",
+            "ultimo_grado_estudios": null,
+            "preparacion_academica": null,
+            "experiencia_legislativa_resumen": null,
+            "foto_oficial_url": "https://congresocol.gob.mx/web/Sistema/uploads/Diputados/60/hectormagana.jpg",
+            "foto_local_path": null,
+            "curriculum_url": "https://congresocol.gob.mx/web/Sistema/uploads/curriculum/60/diputados/Dip_Hector_Magana_Lara.pdf",
+            "total_comisiones": 2,
+            "comisiones": [
+                {
+                    "nombre": "Hacienda, Fiscalización y Cuenta Pública",
+                    "cargo": "Secretario"
+                },
+                {
+                    "nombre": "Seguridad Pública y Protección Civil",
+                    "cargo": "Secretario"
+                }
+            ],
+            "trayectoria_politica": [],
+            "trayectoria_legislativa": [],
+            "trayectoria_administrativa": [],
+            "escolaridad_detalle": [],
+            "licencias": [],
+            "iniciativas": [],
+            "puntos_acuerdo": [],
+            "redes_sociales": [],
+            "metadata": {
+                "fuente_url": "https://congresocol.gob.mx/web/www/diputados/index2.php?id=104&vlegis=60",
+                "sha256_evidencia": "f5702debf9b2237309a0181ac8ffe8744ae6e7b3cefbcce5cfc82d3185632279",
+                "fecha_extraccion": "2026-10-13 23:35:54",
+                "entidad_tipo": "Congreso Local",
+                "node_id": 1
+            }
+        },
+        {
+            "referencia_sil": "col_leg60_105",
+            "nombre_completo": "Sonia Hernández Cayetano",
+            "camara": "Congreso del Estado de Colima",
+            "legislatura": 60,
+            "partido": "MORENA",
+            "principio_eleccion": "Mayoría Relativa",
+            "entidad": "Colima",
+            "distrito": "Distrito IX ( Armería)",
+            "tipo_cargo": "Propietario",
+            "suplente_nombre": null,
+            "fecha_toma_protesta": "2021-10-01",
+            "fecha_nacimiento": null,
+            "correo_institucional": "soniahernandez@congresocol.gob.mx",
+            "telefono": "(312) 31 2 1159",
+            "ubicacion_oficina": "Calzada Galván y los Regalado, Colima, Col.",
+            "ultimo_grado_estudios": null,
+            "preparacion_academica": null,
+            "experiencia_legislativa_resumen": null,
+            "foto_oficial_url": "https://congresocol.gob.mx/web/Sistema/uploads/Diputados/60/sonia_hernandez.jpg",
+            "foto_local_path": null,
+            "curriculum_url": "https://congresocol.gob.mx/web/Sistema/uploads/curriculum/60/diputados/Dip_Sonia_Hernandez_Cayetano.pdf",
+            "total_comisiones": 3,
+            "comisiones": [
+                {
+                    "nombre": "Bienestar, Inclusión Social y Equidad de Género",
+                    "cargo": "Presidenta"
+                },
+                {
+                    "nombre": "Educación, Cultura, Ciencia y Tecnología",
+                    "cargo": "Secretaria"
+                },
+                {
+                    "nombre": "Vigilancia del Órgano Superior de Auditoría y Fiscalización Gubernamental del Estado",
+                    "cargo": "Vocal"
+                }
+            ],
+            "trayectoria_politica": [],
+            "trayectoria_legislativa": [],
+            "trayectoria_administrativa": [],
+            "escolaridad_detalle": [],
+            "licencias": [],
+            "iniciativas": [],
+            "puntos_acuerdo": [],
+            "redes_sociales": [],
+            "metadata": {
+                "fuente_url": "https://congresocol.gob.mx/web/www/diputados/index2.php?id=105&vlegis=60",
+                "sha256_evidencia": "cbcc78130134ced607e3cbe8b7be3375d0791389cf92c59e83cb64976fc41e2e",
+                "fecha_extraccion": "2026-10-13 23:35:54",
+                "entidad_tipo": "Congreso Local",
+                "node_id": 1
+            }
+        },
+        {
+            "referencia_sil": "col_leg60_106",
+            "nombre_completo": "Armando Reyna Magaña",
+            "camara": "Congreso del Estado de Colima",
+            "legislatura": 60,
+            "partido": "MORENA",
+            "principio_eleccion": "Mayoría Relativa",
+            "entidad": "Colima",
+            "distrito": "Distrito X ( Tecomán)",
+            "tipo_cargo": "Propietario",
+            "suplente_nombre": null,
+            "fecha_toma_protesta": "2021-10-01",
+            "fecha_nacimiento": null,
+            "correo_institucional": "armandoreyna@congresocol.gob.mx",
+            "telefono": "(312) 31 2 1159",
+            "ubicacion_oficina": "Calzada Galván y los Regalado, Colima, Col.",
+            "ultimo_grado_estudios": null,
+            "preparacion_academica": null,
+            "experiencia_legislativa_resumen": null,
+            "foto_oficial_url": "https://congresocol.gob.mx/web/Sistema/uploads/Diputados/60/armando_reyna.jpg",
+            "foto_local_path": null,
+            "curriculum_url": "https://congresocol.gob.mx/web/Sistema/uploads/curriculum/60/diputados/Dip_Armando_Reyna_Magana.pdf",
+            "total_comisiones": 4,
+            "comisiones": [
+                {
+                    "nombre": "Desarrollo Rural Sustentable",
+                    "cargo": "Secretario"
+                },
+                {
+                    "nombre": "Estudios Legislativos y Puntos Constitucionales",
+                    "cargo": "Secretario"
+                },
+                {
+                    "nombre": "Presupuesto y Disciplina Financiera",
+                    "cargo": "Secretario"
+                },
+                {
+                    "nombre": "Responsabilidades",
+                    "cargo": "Presidente"
+                }
+            ],
+            "trayectoria_politica": [],
+            "trayectoria_legislativa": [],
+            "trayectoria_administrativa": [],
+            "escolaridad_detalle": [],
+            "licencias": [],
+            "iniciativas": [],
+            "puntos_acuerdo": [],
+            "redes_sociales": [],
+            "metadata": {
+                "fuente_url": "https://congresocol.gob.mx/web/www/diputados/index2.php?id=106&vlegis=60",
+                "sha256_evidencia": "341e4081c54e4182d6f6f38a1fb730e841c44936a7a4e83a1ef70e2488fedfdd",
+                "fecha_extraccion": "2026-10-13 23:35:54",
+                "entidad_tipo": "Congreso Local",
+                "node_id": 1
+            }
+        },
+        {
+            "referencia_sil": "col_leg60_107",
+            "nombre_completo": "Francisco Rubén Romo Ochoa",
+            "camara": "Congreso del Estado de Colima",
+            "legislatura": 60,
+            "partido": "MORENA",
+            "principio_eleccion": "Mayoría Relativa",
+            "entidad": "Colima",
+            "distrito": "Distrito XI ( Manzanillo-Noroeste)",
+            "tipo_cargo": "Propietario",
+            "suplente_nombre": null,
+            "fecha_toma_protesta": "2021-10-01",
+            "fecha_nacimiento": null,
+            "correo_institucional": "rubenromo@congresocol.gob.mx",
+            "telefono": "(312) 31 2 1159",
+            "ubicacion_oficina": "Calzada Galván y los Regalado, Colima, Col.",
+            "ultimo_grado_estudios": null,
+            "preparacion_academica": null,
+            "experiencia_legislativa_resumen": null,
+            "foto_oficial_url": "https://congresocol.gob.mx/web/Sistema/uploads/Diputados/60/francisco_romo.jpg",
+            "foto_local_path": null,
+            "curriculum_url": "https://congresocol.gob.mx/web/Sistema/uploads/curriculum/60/diputados/Dip_Rubem_Romo_Ochoa.pdf",
+            "total_comisiones": 3,
+            "comisiones": [
+                {
+                    "nombre": "Derechos Humanos",
+                    "cargo": "Secretaria"
+                },
+                {
+                    "nombre": "Desarrollo Económico",
+                    "cargo": "Secretario"
+                },
+                {
+                    "nombre": "Seguridad Pública y Protección Civil",
+                    "cargo": "Secretario"
+                }
+            ],
+            "trayectoria_politica": [],
+            "trayectoria_legislativa": [],
+            "trayectoria_administrativa": [],
+            "escolaridad_detalle": [],
+            "licencias": [],
+            "iniciativas": [],
+            "puntos_acuerdo": [],
+            "redes_sociales": [],
+            "metadata": {
+                "fuente_url": "https://congresocol.gob.mx/web/www/diputados/index2.php?id=107&vlegis=60",
+                "sha256_evidencia": "bd124449dbcdbdb605822c4320b61cfb711dda024f16639527e7a97f6dcdf70c",
+                "fecha_extraccion": "2026-10-13 23:35:54",
+                "entidad_tipo": "Congreso Local",
+                "node_id": 1
+            }
+        },
+        {
+            "referencia_sil": "col_leg60_109",
+            "nombre_completo": "Isamar Ramírez Rodríguez",
+            "camara": "Congreso del Estado de Colima",
+            "legislatura": 60,
+            "partido": "MORENA",
+            "principio_eleccion": "Mayoría Relativa",
+            "entidad": "Colima",
+            "distrito": "Distrito XIII ( Manzanillo-Suroeste)",
+            "tipo_cargo": "Propietario",
+            "suplente_nombre": null,
+            "fecha_toma_protesta": "2021-10-01",
+            "fecha_nacimiento": null,
+            "correo_institucional": "isamarramirez@congresocol.gob.mx",
+            "telefono": "(312) 31 2 1159",
+            "ubicacion_oficina": "Calzada Galván y los Regalado, Colima, Col.",
+            "ultimo_grado_estudios": null,
+            "preparacion_academica": null,
+            "experiencia_legislativa_resumen": null,
+            "foto_oficial_url": "https://congresocol.gob.mx/web/Sistema/uploads/Diputados/60/isamar_ramirez.jpg",
+            "foto_local_path": null,
+            "curriculum_url": "https://congresocol.gob.mx/web/Sistema/uploads/curriculum/60/diputados/Dip_Isamar_Ramirez_Rodriguez.pdf",
+            "total_comisiones": 4,
+            "comisiones": [
+                {
+                    "nombre": "Estudios Legislativos y Puntos Constitucionales",
+                    "cargo": "Vocal"
+                },
+                {
+                    "nombre": "Justicia, Gobernación y Poderes",
+                    "cargo": "Presidenta"
+                },
+                {
+                    "nombre": "Presupuesto y Disciplina Financiera",
+                    "cargo": "Secretaria"
+                },
+                {
+                    "nombre": "Responsabilidades",
+                    "cargo": "Secretaria"
+                }
+            ],
+            "trayectoria_politica": [],
+            "trayectoria_legislativa": [],
+            "trayectoria_administrativa": [],
+            "escolaridad_detalle": [],
+            "licencias": [],
+            "iniciativas": [],
+            "puntos_acuerdo": [],
+            "redes_sociales": [],
+            "metadata": {
+                "fuente_url": "https://congresocol.gob.mx/web/www/diputados/index2.php?id=109&vlegis=60",
+                "sha256_evidencia": "2d3d61605c6f062726332f5047d56b4cac9b0a29d8d220ac23465cfec1a3e63d",
+                "fecha_extraccion": "2026-10-13 23:35:54",
+                "entidad_tipo": "Congreso Local",
+                "node_id": 1
+            }
+        },
+        {
+            "referencia_sil": "col_leg60_110",
+            "nombre_completo": "Andrea Naranjo Alcaraz",
+            "camara": "Congreso del Estado de Colima",
+            "legislatura": 60,
+            "partido": "MORENA",
+            "principio_eleccion": "Mayoría Relativa",
+            "entidad": "Colima",
+            "distrito": "Distrito XIV ( Manzanillo/Minatitlán)",
+            "tipo_cargo": "Propietario",
+            "suplente_nombre": null,
+            "fecha_toma_protesta": "2021-10-01",
+            "fecha_nacimiento": null,
+            "correo_institucional": "andreanaranjo@congresocol.gob.mx",
+            "telefono": "(312) 31 2 1159",
+            "ubicacion_oficina": "Calzada Galván y los Regalado, Colima, Col.",
+            "ultimo_grado_estudios": null,
+            "preparacion_academica": null,
+            "experiencia_legislativa_resumen": null,
+            "foto_oficial_url": "https://congresocol.gob.mx/web/Sistema/uploads/Diputados/60/andrea_naranjo.jpg",
+            "foto_local_path": null,
+            "curriculum_url": "https://congresocol.gob.mx/web/Sistema/uploads/curriculum/60/diputados/Dip_Andrea_Naranjo_Alcaraz.pdf",
+            "total_comisiones": 3,
+            "comisiones": [
+                {
+                    "nombre": "Anticorrupción y Transparencia Gubernamental",
+                    "cargo": "Vocal"
+                },
+                {
+                    "nombre": "Hacienda, Fiscalización y Cuenta Pública",
+                    "cargo": "Vocal"
+                },
+                {
+                    "nombre": "Salud y Deporte",
+                    "cargo": "Presidenta"
+                }
+            ],
+            "trayectoria_politica": [],
+            "trayectoria_legislativa": [],
+            "trayectoria_administrativa": [],
+            "escolaridad_detalle": [],
+            "licencias": [],
+            "iniciativas": [],
+            "puntos_acuerdo": [],
+            "redes_sociales": [],
+            "metadata": {
+                "fuente_url": "https://congresocol.gob.mx/web/www/diputados/index2.php?id=110&vlegis=60",
+                "sha256_evidencia": "47ed02013fc09c6f2e856d4ed796d6d43f5e512bff87f5c05e28ab030164d15b",
+                "fecha_extraccion": "2026-10-13 23:35:54",
+                "entidad_tipo": "Congreso Local",
+                "node_id": 1
+            }
+        },
+        {
+            "referencia_sil": "col_leg60_112",
+            "nombre_completo": "Julio Cesar Cano Farías",
+            "camara": "Congreso del Estado de Colima",
+            "legislatura": 60,
+            "partido": "MORENA",
+            "principio_eleccion": "Mayoría Relativa",
+            "entidad": "Colima",
+            "distrito": "Distrito XVI ( Tecomán-Sureste)",
+            "tipo_cargo": "Propietario",
+            "suplente_nombre": null,
+            "fecha_toma_protesta": "2021-10-01",
+            "fecha_nacimiento": null,
+            "correo_institucional": "juliocesarcano@congresocol.gob.mx",
+            "telefono": "(312) 31 2 1159",
+            "ubicacion_oficina": "Calzada Galván y los Regalado, Colima, Col.",
+            "ultimo_grado_estudios": null,
+            "preparacion_academica": null,
+            "experiencia_legislativa_resumen": null,
+            "foto_oficial_url": "https://congresocol.gob.mx/web/Sistema/uploads/Diputados/60/julio_cano.jpg",
+            "foto_local_path": null,
+            "curriculum_url": "https://congresocol.gob.mx/web/Sistema/uploads/curriculum/60/diputados/D_Julio_Cesar_Cano_Farias.pdf",
+            "total_comisiones": 3,
+            "comisiones": [
+                {
+                    "nombre": "Peticiones y Participación Ciudadana",
+                    "cargo": "Secretario"
+                },
+                {
+                    "nombre": "Presupuesto y Disciplina Financiera",
+                    "cargo": "Presidente"
+                },
+                {
+                    "nombre": "Salud y Deporte",
+                    "cargo": "Secretario"
+                }
+            ],
+            "trayectoria_politica": [],
+            "trayectoria_legislativa": [],
+            "trayectoria_administrativa": [],
+            "escolaridad_detalle": [],
+            "licencias": [],
+            "iniciativas": [],
+            "puntos_acuerdo": [],
+            "redes_sociales": [],
+            "metadata": {
+                "fuente_url": "https://congresocol.gob.mx/web/www/diputados/index2.php?id=112&vlegis=60",
+                "sha256_evidencia": "d4d83c72e32c310b8f2c7c9238201528718acc4e3a02086393337cb1894adec2",
+                "fecha_extraccion": "2026-10-13 23:35:53",
+                "entidad_tipo": "Congreso Local",
+                "node_id": 2
+            }
+        },
+        {
+            "referencia_sil": "col_leg60_113",
+            "nombre_completo": "Crispín Guerra Cárdenas",
+            "camara": "Congreso del Estado de Colima",
+            "legislatura": 60,
+            "partido": "PAN",
+            "principio_eleccion": "Representación Proporcional",
+            "entidad": "Colima",
+            "distrito": null,
+            "tipo_cargo": "Propietario",
+            "suplente_nombre": null,
+            "fecha_toma_protesta": "2021-10-01",
+            "fecha_nacimiento": null,
+            "correo_institucional": "crispinguerra@congresocol.gob.mx",
+            "telefono": "(312) 31 2 1159",
+            "ubicacion_oficina": "Calzada Galván y los Regalado, Colima, Col.",
+            "ultimo_grado_estudios": null,
+            "preparacion_academica": null,
+            "experiencia_legislativa_resumen": null,
+            "foto_oficial_url": "https://congresocol.gob.mx/web/Sistema/uploads/Diputados/60/crispin_guerra.jpg",
+            "foto_local_path": null,
+            "curriculum_url": "https://congresocol.gob.mx/web/Sistema/uploads/curriculum/60/diputados/Dip_Crispin_GuerraCardenas.pdf",
+            "total_comisiones": 3,
+            "comisiones": [
+                {
+                    "nombre": "Anticorrupción y Transparencia Gubernamental",
+                    "cargo": "Secretario"
+                },
+                {
+                    "nombre": "Hacienda, Fiscalización y Cuenta Pública",
+                    "cargo": "Secretario"
+                },
+                {
+                    "nombre": "Presupuesto y Disciplina Financiera",
+                    "cargo": "Vocal"
+                }
+            ],
+            "trayectoria_politica": [],
+            "trayectoria_legislativa": [],
+            "trayectoria_administrativa": [],
+            "escolaridad_detalle": [],
+            "licencias": [],
+            "iniciativas": [],
+            "puntos_acuerdo": [],
+            "redes_sociales": [],
+            "metadata": {
+                "fuente_url": "https://congresocol.gob.mx/web/www/diputados/index2.php?id=113&vlegis=60",
+                "sha256_evidencia": "23d044f3b9fe7cf5d8c30d0231a2d6677312b9c5f205c2b902333e8a74fb5b83",
+                "fecha_extraccion": "2026-10-13 23:35:53",
+                "entidad_tipo": "Congreso Local",
+                "node_id": 2
+            }
+        },
+        {
+            "referencia_sil": "col_leg60_114",
+            "nombre_completo": "Luis Alberto Vuelvas Preciado",
+            "camara": "Congreso del Estado de Colima",
+            "legislatura": 60,
+            "partido": "SIN PARTIDO",
+            "principio_eleccion": "Representación Proporcional",
+            "entidad": "Colima",
+            "distrito": null,
+            "tipo_cargo": "Propietario",
+            "suplente_nombre": null,
+            "fecha_toma_protesta": "2021-10-01",
+            "fecha_nacimiento": null,
+            "correo_institucional": "arturonoriega@congresocol.gob.mx",
+            "telefono": "(312) 31 2 1159",
+            "ubicacion_oficina": "Calzada Galván y los Regalado, Colima, Col.",
+            "ultimo_grado_estudios": null,
+            "preparacion_academica": null,
+            "experiencia_legislativa_resumen": null,
+            "foto_oficial_url": "https://congresocol.gob.mx/web/Sistema/uploads/Diputados/60/\tLUIS ALBERTO VUELVAS PRECIADO_3.JPG",
+            "foto_local_path": null,
+            "curriculum_url": null,
+            "total_comisiones": 3,
+            "comisiones": [
+                {
+                    "nombre": "Desarrollo Económico",
+                    "cargo": "Vocal"
+                },
+                {
+                    "nombre": "Peticiones y Participación Ciudadana",
+                    "cargo": "Vocal"
+                },
+                {
+                    "nombre": "Seguridad Pública y Protección Civil",
+                    "cargo": "Presidente"
+                }
+            ],
+            "trayectoria_politica": [],
+            "trayectoria_legislativa": [],
+            "trayectoria_administrativa": [],
+            "escolaridad_detalle": [],
+            "licencias": [],
+            "iniciativas": [],
+            "puntos_acuerdo": [],
+            "redes_sociales": [],
+            "metadata": {
+                "fuente_url": "https://congresocol.gob.mx/web/www/diputados/index2.php?id=114&vlegis=60",
+                "sha256_evidencia": "252f933928fe37a0a137e6ebfd774d0f213325d0bc14b5693aebcb07576b9f4b",
+                "fecha_extraccion": "2026-10-13 23:35:53",
+                "entidad_tipo": "Congreso Local",
+                "node_id": 2
+            }
+        },
+        {
+            "referencia_sil": "col_leg60_115",
+            "nombre_completo": "Sandra Patricia Ceballos Polanco",
+            "camara": "Congreso del Estado de Colima",
+            "legislatura": 60,
+            "partido": "PAN",
+            "principio_eleccion": "Representación Proporcional",
+            "entidad": "Colima",
+            "distrito": null,
+            "tipo_cargo": "Propietario",
+            "suplente_nombre": null,
+            "fecha_toma_protesta": "2021-10-01",
+            "fecha_nacimiento": null,
+            "correo_institucional": "patriciaceballos@congresocol.gob.mx",
+            "telefono": "(312) 31 2 1159",
+            "ubicacion_oficina": "Calzada Galván y los Regalado, Colima, Col.",
+            "ultimo_grado_estudios": null,
+            "preparacion_academica": null,
+            "experiencia_legislativa_resumen": null,
+            "foto_oficial_url": "https://congresocol.gob.mx/web/Sistema/uploads/Diputados/60/sandraceballos.png",
+            "foto_local_path": null,
+            "curriculum_url": "https://congresocol.gob.mx/web/Sistema/uploads/curriculum/60/diputados/Dip_Sandra_Patricia_Ceballos_Polanco.pdf",
+            "total_comisiones": 2,
+            "comisiones": [
+                {
+                    "nombre": "Desarrollo Urbano, Medio Ambiente y Movilidad",
+                    "cargo": "Secretario"
+                },
+                {
+                    "nombre": "Vigilancia del Órgano Superior de Auditoría y Fiscalización Gubernamental del Estado",
+                    "cargo": "Secretario"
+                }
+            ],
+            "trayectoria_politica": [],
+            "trayectoria_legislativa": [],
+            "trayectoria_administrativa": [],
+            "escolaridad_detalle": [],
+            "licencias": [],
+            "iniciativas": [],
+            "puntos_acuerdo": [],
+            "redes_sociales": [],
+            "metadata": {
+                "fuente_url": "https://congresocol.gob.mx/web/www/diputados/index2.php?id=115&vlegis=60",
+                "sha256_evidencia": "52fe2031ce725c9cbd8afb4ba7f428e3293bb8f0881ff5128cbe89c568c08f3e",
+                "fecha_extraccion": "2026-10-13 23:35:53",
+                "entidad_tipo": "Congreso Local",
+                "node_id": 2
+            }
+        },
+        {
+            "referencia_sil": "col_leg60_117",
+            "nombre_completo": "Evangelina Bustamante Morales",
+            "camara": "Congreso del Estado de Colima",
+            "legislatura": 60,
+            "partido": "PT",
+            "principio_eleccion": "Representación Proporcional",
+            "entidad": "Colima",
+            "distrito": null,
+            "tipo_cargo": "Propietario",
+            "suplente_nombre": null,
+            "fecha_toma_protesta": "2021-10-01",
+            "fecha_nacimiento": null,
+            "correo_institucional": "evangelinabustamante@congresocol.gob.mx",
+            "telefono": "(312) 31 2 1159",
+            "ubicacion_oficina": "Calzada Galván y los Regalado, Colima, Col.",
+            "ultimo_grado_estudios": null,
+            "preparacion_academica": null,
+            "experiencia_legislativa_resumen": null,
+            "foto_oficial_url": "https://congresocol.gob.mx/web/Sistema/uploads/Diputados/60/evangelina_bustamante2.jpg",
+            "foto_local_path": null,
+            "curriculum_url": "https://congresocol.gob.mx/web/Sistema/uploads/curriculum/60/diputados/MariaMendozaCV.pdf",
+            "total_comisiones": 3,
+            "comisiones": [
+                {
+                    "nombre": "Educación, Cultura, Ciencia y Tecnología",
+                    "cargo": "Secretaria"
+                },
+                {
+                    "nombre": "Salud y Deporte",
+                    "cargo": "Secretaria"
+                },
+                {
+                    "nombre": "Vigilancia del Órgano Superior de Auditoría y Fiscalización Gubernamental del Estado",
+                    "cargo": "Presidenta"
+                }
+            ],
+            "trayectoria_politica": [],
+            "trayectoria_legislativa": [],
+            "trayectoria_administrativa": [],
+            "escolaridad_detalle": [],
+            "licencias": [],
+            "iniciativas": [],
+            "puntos_acuerdo": [],
+            "redes_sociales": [],
+            "metadata": {
+                "fuente_url": "https://congresocol.gob.mx/web/www/diputados/index2.php?id=117&vlegis=60",
+                "sha256_evidencia": "671276521f1ef2009c34469cf189c1f83627de844b6599c517ae23d632822ccf",
+                "fecha_extraccion": "2026-10-13 23:35:53",
+                "entidad_tipo": "Congreso Local",
+                "node_id": 2
+            }
+        },
+        {
+            "referencia_sil": "col_leg60_118",
+            "nombre_completo": "Glenda Yazmín Ochoa",
+            "camara": "Congreso del Estado de Colima",
+            "legislatura": 60,
+            "partido": "MORENA",
+            "principio_eleccion": "Representación Proporcional",
+            "entidad": "Colima",
+            "distrito": null,
+            "tipo_cargo": "Propietario",
+            "suplente_nombre": null,
+            "fecha_toma_protesta": "2021-10-01",
+            "fecha_nacimiento": null,
+            "correo_institucional": "glendayazmin@congresocol.gob.mx",
+            "telefono": "(312) 31 2 1159",
+            "ubicacion_oficina": "Calzada Galván y los Regalado, Colima, Col.",
+            "ultimo_grado_estudios": null,
+            "preparacion_academica": null,
+            "experiencia_legislativa_resumen": null,
+            "foto_oficial_url": "https://congresocol.gob.mx/web/Sistema/uploads/Diputados/60/glendaochoa.png",
+            "foto_local_path": null,
+            "curriculum_url": "https://congresocol.gob.mx/web/Sistema/uploads/curriculum/60/diputados/CV_2024_DIP_GLENDA.pdf",
+            "total_comisiones": 3,
+            "comisiones": [
+                {
+                    "nombre": "Bienestar, Inclusión Social y Equidad de Género",
+                    "cargo": "Secretaria"
+                },
+                {
+                    "nombre": "Educación, Cultura, Ciencia y Tecnología",
+                    "cargo": "Vocal"
+                },
+                {
+                    "nombre": "Peticiones y Participación Ciudadana",
+                    "cargo": "Presidenta"
+                }
+            ],
+            "trayectoria_politica": [],
+            "trayectoria_legislativa": [],
+            "trayectoria_administrativa": [],
+            "escolaridad_detalle": [],
+            "licencias": [],
+            "iniciativas": [],
+            "puntos_acuerdo": [],
+            "redes_sociales": [],
+            "metadata": {
+                "fuente_url": "https://congresocol.gob.mx/web/www/diputados/index2.php?id=118&vlegis=60",
+                "sha256_evidencia": "710ca9483ecde91ecd5a84af7799787204ff40e2386752fb5ea6a391b0fb0d61",
+                "fecha_extraccion": "2026-10-13 23:35:53",
+                "entidad_tipo": "Congreso Local",
+                "node_id": 2
+            }
+        },
+        {
+            "referencia_sil": "col_leg60_119",
+            "nombre_completo": "Ignacio Vizcaíno Ramírez",
+            "camara": "Congreso del Estado de Colima",
+            "legislatura": 60,
+            "partido": "SIN PARTIDO",
+            "principio_eleccion": "Representación Proporcional",
+            "entidad": "Colima",
+            "distrito": null,
+            "tipo_cargo": "Propietario",
+            "suplente_nombre": null,
+            "fecha_toma_protesta": "2021-10-01",
+            "fecha_nacimiento": null,
+            "correo_institucional": "ignaciovizcaino@congresocol.gob.mx",
+            "telefono": "(312) 31 2 1159",
+            "ubicacion_oficina": "Calzada Galván y los Regalado, Colima, Col.",
+            "ultimo_grado_estudios": null,
+            "preparacion_academica": null,
+            "experiencia_legislativa_resumen": null,
+            "foto_oficial_url": "https://congresocol.gob.mx/web/Sistema/uploads/Diputados/60/ignacio_vizcaino.JPG",
+            "foto_local_path": null,
+            "curriculum_url": "https://congresocol.gob.mx/web/Sistema/uploads/curriculum/60/diputados/IGNACIO_VIZCAINO.pdf",
+            "total_comisiones": 3,
+            "comisiones": [
+                {
+                    "nombre": "Estudios Legislativos y Puntos Constitucionales",
+                    "cargo": "Secretario"
+                },
+                {
+                    "nombre": "Justicia, Gobernación y Poderes",
+                    "cargo": "Secretario"
+                },
+                {
+                    "nombre": "Peticiones y Participación Ciudadana",
+                    "cargo": "Secretario"
+                }
+            ],
+            "trayectoria_politica": [],
+            "trayectoria_legislativa": [],
+            "trayectoria_administrativa": [],
+            "escolaridad_detalle": [],
+            "licencias": [],
+            "iniciativas": [],
+            "puntos_acuerdo": [],
+            "redes_sociales": [],
+            "metadata": {
+                "fuente_url": "https://congresocol.gob.mx/web/www/diputados/index2.php?id=119&vlegis=60",
+                "sha256_evidencia": "e78cb06c4f5cf4d2fcdbe08c7d24f9a421a6fdbcaba2d289a3dfad766a62754f",
+                "fecha_extraccion": "2026-10-13 23:35:53",
+                "entidad_tipo": "Congreso Local",
+                "node_id": 2
+            }
+        },
+        {
+            "referencia_sil": "col_leg60_120",
+            "nombre_completo": "Kathia Zared Castillo Hernández",
+            "camara": "Congreso del Estado de Colima",
+            "legislatura": 60,
+            "partido": "MORENA",
+            "principio_eleccion": "Representación Proporcional",
+            "entidad": "Colima",
+            "distrito": null,
+            "tipo_cargo": "Propietario",
+            "suplente_nombre": null,
+            "fecha_toma_protesta": "2021-10-01",
+            "fecha_nacimiento": null,
+            "correo_institucional": "kathiacastillo@congresocol.gob.mx",
+            "telefono": "(312) 31 2 1159",
+            "ubicacion_oficina": "Calzada Galván y los Regalado, Colima, Col.",
+            "ultimo_grado_estudios": null,
+            "preparacion_academica": null,
+            "experiencia_legislativa_resumen": null,
+            "foto_oficial_url": "https://congresocol.gob.mx/web/Sistema/uploads/Diputados/60/kathia_castillo.JPG",
+            "foto_local_path": null,
+            "curriculum_url": "https://congresocol.gob.mx/web/Sistema/uploads/curriculum/60/diputados/Dip_Kathia_Zared_Castillo_Hernandez.pdf",
+            "total_comisiones": 1,
+            "comisiones": [
+                {
+                    "nombre": "Responsabilidades",
+                    "cargo": "Secretaria"
+                }
+            ],
+            "trayectoria_politica": [],
+            "trayectoria_legislativa": [],
+            "trayectoria_administrativa": [],
+            "escolaridad_detalle": [],
+            "licencias": [],
+            "iniciativas": [],
+            "puntos_acuerdo": [],
+            "redes_sociales": [],
+            "metadata": {
+                "fuente_url": "https://congresocol.gob.mx/web/www/diputados/index2.php?id=120&vlegis=60",
+                "sha256_evidencia": "1a75e3a339df99c74b41a8a0c53750908a340c3eb4d0a4a6fdbe1b54e6ec42f3",
+                "fecha_extraccion": "2026-10-13 23:35:53",
+                "entidad_tipo": "Congreso Local",
+                "node_id": 2
+            }
+        },
+        {
+            "referencia_sil": "col_leg60_121",
+            "nombre_completo": "Rigoberto García Negrete",
+            "camara": "Congreso del Estado de Colima",
+            "legislatura": 60,
+            "partido": "SIN PARTIDO",
+            "principio_eleccion": "Representación Proporcional",
+            "entidad": "Colima",
+            "distrito": null,
+            "tipo_cargo": "Propietario",
+            "suplente_nombre": null,
+            "fecha_toma_protesta": "2021-10-01",
+            "fecha_nacimiento": null,
+            "correo_institucional": "rigobertogarcia@congresocol.gob.mx",
+            "telefono": "(312) 31 2 1159",
+            "ubicacion_oficina": "Calzada Galván y los Regalado, Colima, Col.",
+            "ultimo_grado_estudios": null,
+            "preparacion_academica": null,
+            "experiencia_legislativa_resumen": null,
+            "foto_oficial_url": "https://congresocol.gob.mx/web/Sistema/uploads/Diputados/60/rigoberto_garcia.JPG",
+            "foto_local_path": null,
+            "curriculum_url": "https://congresocol.gob.mx/web/Sistema/uploads/curriculum/60/diputados/Dip_Rigoberto_Garcia_Negrete.pdf",
+            "total_comisiones": 2,
+            "comisiones": [
+                {
+                    "nombre": "Hacienda, Fiscalización y Cuenta Pública",
+                    "cargo": "Vocal"
+                },
+                {
+                    "nombre": "Vigilancia del Órgano Superior de Auditoría y Fiscalización Gubernamental del Estado",
+                    "cargo": "Secretario"
+                }
+            ],
+            "trayectoria_politica": [],
+            "trayectoria_legislativa": [],
+            "trayectoria_administrativa": [],
+            "escolaridad_detalle": [],
+            "licencias": [],
+            "iniciativas": [],
+            "puntos_acuerdo": [],
+            "redes_sociales": [],
+            "metadata": {
+                "fuente_url": "https://congresocol.gob.mx/web/www/diputados/index2.php?id=121&vlegis=60",
+                "sha256_evidencia": "0e8ef1bc318145094e2986e09de3c489438cc4167d4f8b2be0188c58d95f9631",
+                "fecha_extraccion": "2026-10-13 23:35:53",
+                "entidad_tipo": "Congreso Local",
+                "node_id": 2
+            }
+        },
+        {
+            "referencia_sil": "col_leg60_122",
+            "nombre_completo": "David Lorenzo Grajales Pérez",
+            "camara": "Congreso del Estado de Colima",
+            "legislatura": 60,
+            "partido": "MORENA",
+            "principio_eleccion": "Representación Proporcional",
+            "entidad": "Colima",
+            "distrito": null,
+            "tipo_cargo": "Propietario",
+            "suplente_nombre": null,
+            "fecha_toma_protesta": "2021-10-01",
+            "fecha_nacimiento": null,
+            "correo_institucional": "davidgrajales@congresocol.gob.mx",
+            "telefono": "(312) 31 2 1159",
+            "ubicacion_oficina": "Calzada Galván y los Regalado, Colima, Col.",
+            "ultimo_grado_estudios": null,
+            "preparacion_academica": null,
+            "experiencia_legislativa_resumen": null,
+            "foto_oficial_url": "https://congresocol.gob.mx/web/Sistema/uploads/Diputados/60/David_Grajales.jpeg",
+            "foto_local_path": null,
+            "curriculum_url": "https://congresocol.gob.mx/web/Sistema/uploads/curriculum/60/diputados/Diputado Grajales.pdf",
+            "total_comisiones": 1,
+            "comisiones": [
+                {
+                    "nombre": "Desarrollo Urbano, Medio Ambiente y Movilidad",
+                    "cargo": "Presidente"
+                }
+            ],
+            "trayectoria_politica": [],
+            "trayectoria_legislativa": [],
+            "trayectoria_administrativa": [],
+            "escolaridad_detalle": [],
+            "licencias": [],
+            "iniciativas": [],
+            "puntos_acuerdo": [],
+            "redes_sociales": [],
+            "metadata": {
+                "fuente_url": "https://congresocol.gob.mx/web/www/diputados/index2.php?id=122&vlegis=60",
+                "sha256_evidencia": "932475481f5f6078f40a31c98232a8f29577000bac8761137dd395da796f7357",
+                "fecha_extraccion": "2026-10-13 23:35:53",
+                "entidad_tipo": "Congreso Local",
+                "node_id": 2
+            }
+        },
+        {
+            "referencia_sil": "col_leg60_123",
+            "nombre_completo": "Yommira Jockimber Carrillo Barreto",
+            "camara": "Congreso del Estado de Colima",
+            "legislatura": 60,
+            "partido": "MORENA",
+            "principio_eleccion": "Mayoría Relativa",
+            "entidad": "Colima",
+            "distrito": "Distrito XV ( Tecomán-Norte)",
+            "tipo_cargo": "Propietario",
+            "suplente_nombre": null,
+            "fecha_toma_protesta": "2021-10-01",
+            "fecha_nacimiento": null,
+            "correo_institucional": "yommiracarrillo@congresocol.gob.mx",
+            "telefono": "(312) 31 2 1159",
+            "ubicacion_oficina": "Calzada Galván y los Regalado, Colima, Col.",
+            "ultimo_grado_estudios": null,
+            "preparacion_academica": null,
+            "experiencia_legislativa_resumen": null,
+            "foto_oficial_url": "https://congresocol.gob.mx/web/Sistema/uploads/Diputados/60/Diputada_Yommira.jpeg",
+            "foto_local_path": null,
+            "curriculum_url": "https://congresocol.gob.mx/web/Sistema/uploads/curriculum/60/diputados/D_Yomi.pdf",
+            "total_comisiones": 3,
+            "comisiones": [
+                {
+                    "nombre": "Estudios Legislativos y Puntos Constitucionales",
+                    "cargo": "Presidenta"
+                },
+                {
+                    "nombre": "Justicia, Gobernación y Poderes",
+                    "cargo": "Secretaria"
+                },
+                {
+                    "nombre": "Responsabilidades",
+                    "cargo": "Vocal"
+                }
+            ],
+            "trayectoria_politica": [],
+            "trayectoria_legislativa": [],
+            "trayectoria_administrativa": [],
+            "escolaridad_detalle": [],
+            "licencias": [],
+            "iniciativas": [],
+            "puntos_acuerdo": [],
+            "redes_sociales": [],
+            "metadata": {
+                "fuente_url": "https://congresocol.gob.mx/web/www/diputados/index2.php?id=123&vlegis=60",
+                "sha256_evidencia": "10709cd7af38bf392dd42ea84da2965f161a70d413cb00a684e47930e9fa6d30",
+                "fecha_extraccion": "2026-10-13 23:35:53",
+                "entidad_tipo": "Congreso Local",
+                "node_id": 2
+            }
+        },
+        {
+            "referencia_sil": "col_leg60_124",
+            "nombre_completo": "Colima Natali Méndez García",
+            "camara": "Congreso del Estado de Colima",
+            "legislatura": 60,
+            "partido": "MORENA",
+            "principio_eleccion": "Mayoría Relativa",
+            "entidad": "Colima",
+            "distrito": "Distrito XII ( Manzanillo-Centro)",
+            "tipo_cargo": "Propietario",
+            "suplente_nombre": null,
+            "fecha_toma_protesta": "2021-10-01",
+            "fecha_nacimiento": null,
+            "correo_institucional": "colimamendez@congresocol.gob.mx",
+            "telefono": "(312) 31 2 1159",
+            "ubicacion_oficina": "Calzada Galván y los Regalado, Colima, Col.",
+            "ultimo_grado_estudios": null,
+            "preparacion_academica": null,
+            "experiencia_legislativa_resumen": null,
+            "foto_oficial_url": "https://congresocol.gob.mx/web/Sistema/uploads/Diputados/60/colima_nataly.jpeg",
+            "foto_local_path": null,
+            "curriculum_url": "https://congresocol.gob.mx/web/Sistema/uploads/curriculum/60/diputados/Diputada Colima Natali.pdf",
+            "total_comisiones": 0,
+            "comisiones": [],
+            "trayectoria_politica": [],
+            "trayectoria_legislativa": [],
+            "trayectoria_administrativa": [],
+            "escolaridad_detalle": [],
+            "licencias": [],
+            "iniciativas": [],
+            "puntos_acuerdo": [],
+            "redes_sociales": [],
+            "metadata": {
+                "fuente_url": "https://congresocol.gob.mx/web/www/diputados/index2.php?id=124&vlegis=60",
+                "sha256_evidencia": "4ff511001b9eea9bcd53da56f429844c7c702ff210f3cc1aeab702d36cce0b9b",
+                "fecha_extraccion": "2026-10-13 23:35:53",
+                "entidad_tipo": "Congreso Local",
+                "node_id": 2
+            }
+        }
+    ]
+}

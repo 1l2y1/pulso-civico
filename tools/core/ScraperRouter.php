@@ -46,11 +46,14 @@ class ScraperRouter
             case 'bajacalifornia':
                 return self::scrapeBajaCalifornia($config, $params);
 
+            case 'colima':
+                return self::scrapeColima($config, $params);
+
             default:
                 return [
                     'ok' => false,
                     'error' => "Fuente de scraping '{$source}' no soportada.",
-                    'available_sources' => ['sil', 'votaciones', 'asistencias', 'bc'],
+                    'available_sources' => ['sil', 'votaciones', 'asistencias', 'bc', 'colima'],
                 ];
         }
     }
@@ -174,6 +177,49 @@ class ScraperRouter
         $service = new \PulsoCivico\Services\CongresoBajaCaliforniaScraperService($httpClient, $logger, $config['paths']['storage']);
 
         return $service->scrapeLegislatura25();
+    }
+
+    private static function scrapeColima(array $config, array $params): array
+    {
+        $logger = new Logger($config['paths']['logs'], 'ROUTER-COLIMA');
+        $httpConfig = array_merge($config['sil'], [
+            'rate_limit_ms' => (int) ($params['rate_limit_ms'] ?? ($config['sil']['rate_limit_ms'] ?? 1250)),
+        ]);
+        if (!empty($params['proxy'])) {
+            $httpConfig['proxy'] = (string)$params['proxy'];
+        }
+        if (!empty($params['interface'])) {
+            $httpConfig['interface'] = (string)$params['interface'];
+        }
+
+        $httpClient = new HttpClient($httpConfig, $logger);
+        $service = new \PulsoCivico\Services\CongresoColimaScraperService($httpClient, $logger, $config['paths']['storage']);
+
+        $legislatura = isset($params['legislatura'])
+            ? (int)$params['legislatura']
+            : (isset($params['leg']) ? (int)$params['leg'] : 61);
+
+        if (!empty($params['consolidate'])) {
+            return $service->consolidateNodes($legislatura);
+        }
+
+        $nodeId = isset($params['node'])
+            ? (int)$params['node']
+            : (isset($params['node_id'])
+                ? (int)$params['node_id']
+                : (getenv('SCRAPER_NODE_ID') !== false && getenv('SCRAPER_NODE_ID') !== '' ? (int)getenv('SCRAPER_NODE_ID') : null));
+
+        $totalNodes = isset($params['total_nodes'])
+            ? (int)$params['total_nodes']
+            : (getenv('SCRAPER_TOTAL_NODES') !== false && getenv('SCRAPER_TOTAL_NODES') !== '' ? (int)getenv('SCRAPER_TOTAL_NODES') : 2);
+
+        $options = [
+            'node_id' => $nodeId,
+            'total_nodes' => $totalNodes,
+            'download_photos' => !empty($params['download_photos']),
+        ];
+
+        return $service->scrapeLegislatura($legislatura, $options);
     }
 }
 

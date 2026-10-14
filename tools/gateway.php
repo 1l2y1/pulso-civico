@@ -222,6 +222,7 @@ switch ($action) {
         break;
 
     case 'scrape':
+    case 'scraper:run':
     case 'ingest':
         // Target puede ser 'sil', 'nacional' o un ID numérico de entidad
         // Target puede ser 'sil', 'nacional', un ID de entidad o cadena key=val
@@ -246,7 +247,7 @@ switch ($action) {
                         $params[$k] = is_numeric($v) ? (int)$v : $v;
                     }
                 }
-            } elseif (in_array(strtolower($inp), ['sil', 'votaciones', 'asistencias', 'bc', 'bajacalifornia'])) {
+            } elseif (in_array(strtolower($inp), ['sil', 'votaciones', 'asistencias', 'bc', 'bajacalifornia', 'colima'])) {
                 $source = strtolower($inp);
             }
         }

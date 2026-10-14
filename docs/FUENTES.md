@@ -16,9 +16,11 @@ Estado: ✅ cubierta · 🚧 en progreso · 🙋 busca voluntario
 | Declaranet / PNT | https://www.plataformadetransparencia.org.mx | Declaraciones patrimoniales públicas | 🙋 | — |
 
 ## Congresos locales (32)
-| Estado | URL | Estado |
-|---|---|---|
-| Aguascalientes … Zacatecas | *(por documentar)* | 🙋 |
+| Estado | URL | Datos | Estado | Responsable |
+|---|---|---|---|---|
+| Baja California | https://www.congresobc.gob.mx | Legislatura XXV (2024-2027), 25 diputados | ✅ | Core |
+| Colima | https://congresocol.gob.mx/web/www/index.php | Legislatura LXI (2024-2027), 25 diputados, comisiones | ✅ | Core |
+| Aguascalientes … Zacatecas (30 restantes) | *(por documentar)* | — | 🙋 | — |
 
 > Adopta un estado: abre un Issue con la plantilla **"Nueva fuente"** y agrégalo aquí.
 

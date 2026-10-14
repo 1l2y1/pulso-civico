@@ -13,6 +13,8 @@ class HttpClient
     private int $rateLimitMs;
     private Logger $logger;
     private bool $verifySsl;
+    private ?string $proxy;
+    private ?string $interface;
 
     public function __construct(array $config, Logger $logger)
     {
@@ -20,6 +22,8 @@ class HttpClient
         $this->timeout = $config['timeout'] ?? 30;
         $this->rateLimitMs = $config['rate_limit_ms'] ?? 500;
         $this->verifySsl = (bool) ($config['verify_ssl'] ?? false);
+        $this->proxy = !empty($config['proxy']) ? (string) $config['proxy'] : null;
+        $this->interface = !empty($config['interface']) ? (string) $config['interface'] : null;
         $this->logger = $logger;
     }
 
@@ -65,13 +69,21 @@ class HttpClient
                 CURLOPT_COOKIEJAR => $cookieFile,
             ];
 
+            if ($this->proxy !== null && $this->proxy !== '') {
+                $curlOptions[CURLOPT_PROXY] = $this->proxy;
+            }
+            if ($this->interface !== null && $this->interface !== '') {
+                $curlOptions[CURLOPT_INTERFACE] = $this->interface;
+            }
+
             if ($method === 'POST') {
                 $curlOptions[CURLOPT_POST] = true;
                 $curlOptions[CURLOPT_POSTFIELDS] = http_build_query($params);
-                $curlOptions[CURLOPT_REFERER] = 'http://sil.gobernacion.gob.mx/Reportes/Integracion/HCongreso/IntegHCongreso.php';
+                if (!isset($curlOptions[CURLOPT_REFERER])) {
+                    $curlOptions[CURLOPT_REFERER] = 'http://sil.gobernacion.gob.mx/Reportes/Integracion/HCongreso/IntegHCongreso.php';
+                }
             } elseif ($method === 'GET' && !empty($params)) {
                 $curlOptions[CURLOPT_URL] = $url . '?' . http_build_query($params);
-                $curlOptions[CURLOPT_REFERER] = 'http://sil.gobernacion.gob.mx/';
             }
 
             curl_setopt_array($ch, $curlOptions);
